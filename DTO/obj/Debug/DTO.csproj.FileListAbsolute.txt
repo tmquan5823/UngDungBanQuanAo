@@ -6,3 +6,11 @@ C:\Users\OS\source\repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.csproj.CoreCompileIn
 C:\Users\OS\source\repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\OS\source\repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.dll
 C:\Users\OS\source\repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.pdb
+C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\bin\Debug\DTO.dll
+C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\bin\Debug\DTO.pdb
+C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.dll
+C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.pdb

@@ -17,10 +17,9 @@ namespace GUI
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormLogin());
-            BillDAL test = new BillDAL();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormLogin());
         }
     }
 }

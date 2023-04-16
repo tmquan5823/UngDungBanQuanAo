@@ -16,13 +16,7 @@ namespace GUI
         {
             InitializeComponent();
         }
-
-        private void grb_info_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_name_TextChanged(object sender, EventArgs e)
+        private void UCQuanLySanPham_Load(object sender, EventArgs e)
         {
 
         }

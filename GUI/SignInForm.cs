@@ -10,12 +10,18 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class UCTrangChu : UserControl
+    public partial class SignInForm : Form
     {
-        public UCTrangChu()
+        public SignInForm()
         {
             InitializeComponent();
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+            FormLogin frm = new FormLogin();
+            this.Dispose();
+            frm.ShowDialog();
+        }
     }
 }
