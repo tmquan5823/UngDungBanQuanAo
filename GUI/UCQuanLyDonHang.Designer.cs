@@ -45,7 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewSanPham = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -86,7 +86,7 @@
             this.grb_TTHoaDon.Controls.Add(this.label4);
             this.grb_TTHoaDon.Controls.Add(this.label2);
             this.grb_TTHoaDon.Controls.Add(this.label1);
-            this.grb_TTHoaDon.Controls.Add(this.listView1);
+            this.grb_TTHoaDon.Controls.Add(this.listViewSanPham);
             this.grb_TTHoaDon.Location = new System.Drawing.Point(11, 14);
             this.grb_TTHoaDon.Name = "grb_TTHoaDon";
             this.grb_TTHoaDon.Size = new System.Drawing.Size(1252, 374);
@@ -124,7 +124,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(158, 310);
+            this.button2.Location = new System.Drawing.Point(148, 316);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 52);
             this.button2.TabIndex = 17;
@@ -243,24 +243,24 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tổng tiền: ";
             // 
-            // listView1
+            // listViewSanPham
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewSanPham.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
             this.columnHeader12,
             this.columnHeader14,
             this.columnHeader6,
             this.columnHeader8});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(648, 21);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(588, 290);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewSanPham.FullRowSelect = true;
+            this.listViewSanPham.GridLines = true;
+            this.listViewSanPham.HideSelection = false;
+            this.listViewSanPham.Location = new System.Drawing.Point(648, 21);
+            this.listViewSanPham.Name = "listViewSanPham";
+            this.listViewSanPham.Size = new System.Drawing.Size(588, 290);
+            this.listViewSanPham.TabIndex = 1;
+            this.listViewSanPham.UseCompatibleStateImageBehavior = false;
+            this.listViewSanPham.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader7
             // 
@@ -360,6 +360,7 @@
             this.listBill.TabIndex = 0;
             this.listBill.UseCompatibleStateImageBehavior = false;
             this.listBill.View = System.Windows.Forms.View.Details;
+            this.listBill.SelectedIndexChanged += new System.EventHandler(this.listBill_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -412,7 +413,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewSanPham;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader14;

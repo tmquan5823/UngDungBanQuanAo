@@ -16,5 +16,14 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void listBill_SelectedIndexChanged(object sender, EventArgs e)
+        {   
+            if(listBill.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = listBill.SelectedItems[0];
+
+            }
+        }
     }
 }

@@ -14,7 +14,8 @@ namespace DTO
         public DateTime DateOfBirth { set; get; }
         public string Sex { set; get; }
         public string UserName { set; get; }
-        public UserInfo(int UserID, string Tel, string Email, DateTime DateOfBirth, string Sex, string UserName)
+        public int AccountID { set; get; }
+        public UserInfo(int UserID, string Tel, string Email, DateTime DateOfBirth, string Sex, string UserName, int accountID)
         {
             this.UserID = UserID;
             this.Tel = Tel;
@@ -22,6 +23,7 @@ namespace DTO
             this.DateOfBirth = DateOfBirth;
             this.Sex = Sex;
             this.UserName = UserName;
+            AccountID = accountID;
         }
         public UserInfo() { }
     }

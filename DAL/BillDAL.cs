@@ -10,7 +10,7 @@ namespace DAL
 {
     public class BillDAL : Database
     {
-
+        public static BillDAL getInstance = new BillDAL();
         public List<BillDetail> GetBillDetailListById(int idBill)
         {
             List<BillDetail> list = new List<BillDetail>();

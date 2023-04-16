@@ -10,6 +10,7 @@ namespace DAL
 {
     public class AccountDAL : Database
     {
+        public static AccountDAL Instance = new AccountDAL();
         public Boolean CheckAccount(Account account)
         {
             OpenConnection();
@@ -36,7 +37,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "insert into Account(UserAccount, UserPassword, UserRole, UserID) values('" + a.UserAccount + "', '" + a.UserPassword + "', 'Customer', " + a.UserID + ")";
+            sqlcmd.CommandText = "insert into Account(UserAccount, UserPassword, UserRole) values('" + a.UserAccount + "', '" + a.UserPassword + "', 'Customer')";
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }

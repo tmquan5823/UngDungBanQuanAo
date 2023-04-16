@@ -10,6 +10,7 @@ namespace DAL
 {
     public class SizeDAL : Database
     {
+        public static SizeDAL Instance = new SizeDAL();
         public List<Size> getListByClothesID(int ID)
         {
             List<Size> list = new List<Size>();

@@ -10,6 +10,7 @@ namespace DAL
 {
     public class ClothesDAL : Database
     {
+        public static ClothesDAL instance = new ClothesDAL();
         public List<Clothes> getList()
         {
             List<Clothes> list = new List<Clothes>();
