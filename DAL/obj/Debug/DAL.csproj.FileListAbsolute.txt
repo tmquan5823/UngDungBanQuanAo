@@ -8,3 +8,13 @@ C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CoreCompileIn
 C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.dll
 C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.pdb
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DAL.dll
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DAL.pdb
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DTO.dll
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DTO.pdb
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.dll
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.pdb

@@ -11,6 +11,7 @@ namespace DAL
 {
     public class UserInfoDAL : Database
     {
+        public static UserInfoDAL getInstance = new UserInfoDAL();
         public int getIDByTelAndEmail(string Tel, string Email)
         {
             OpenConnection();

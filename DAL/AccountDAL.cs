@@ -10,6 +10,7 @@ namespace DAL
 {
     public class AccountDAL : Database
     {
+        public static AccountDAL Instance = new AccountDAL();
         public Boolean CheckAccount(Account account)
         {
             OpenConnection();
