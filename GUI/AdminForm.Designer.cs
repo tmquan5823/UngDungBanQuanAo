@@ -38,12 +38,15 @@
             this.panel_logo = new System.Windows.Forms.Panel();
             this.panel_info = new System.Windows.Forms.Panel();
             this.panel_main = new System.Windows.Forms.Panel();
+            this.lbl_info = new System.Windows.Forms.Label();
             this.panel_sidebar.SuspendLayout();
             this.panel_admin.SuspendLayout();
+            this.panel_info.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_sidebar
             // 
+            this.panel_sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel_sidebar.Controls.Add(this.btn_TrangChu);
             this.panel_sidebar.Controls.Add(this.btn_QuanLyDonHang);
             this.panel_sidebar.Controls.Add(this.btn_QuanLySanPham);
@@ -59,6 +62,7 @@
             // btn_TrangChu
             // 
             this.btn_TrangChu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_TrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TrangChu.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_TrangChu.IconColor = System.Drawing.Color.Black;
@@ -73,6 +77,7 @@
             // btn_QuanLyDonHang
             // 
             this.btn_QuanLyDonHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_QuanLyDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_QuanLyDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QuanLyDonHang.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_QuanLyDonHang.IconColor = System.Drawing.Color.Black;
@@ -83,10 +88,12 @@
             this.btn_QuanLyDonHang.TabIndex = 4;
             this.btn_QuanLyDonHang.Text = "Quản lý đơn hàng";
             this.btn_QuanLyDonHang.UseVisualStyleBackColor = true;
+            this.btn_QuanLyDonHang.Click += new System.EventHandler(this.btn_QuanLyDonHang_Click);
             // 
             // btn_QuanLySanPham
             // 
             this.btn_QuanLySanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_QuanLySanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_QuanLySanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_QuanLySanPham.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_QuanLySanPham.IconColor = System.Drawing.Color.Black;
@@ -97,6 +104,7 @@
             this.btn_QuanLySanPham.TabIndex = 3;
             this.btn_QuanLySanPham.Text = "Quản lý sản phẩm";
             this.btn_QuanLySanPham.UseVisualStyleBackColor = true;
+            this.btn_QuanLySanPham.Click += new System.EventHandler(this.btn_QuanLySanPham_Click);
             // 
             // panel_admin
             // 
@@ -110,7 +118,9 @@
             // 
             // btn_dangxuat
             // 
+            this.btn_dangxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_dangxuat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_dangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dangxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dangxuat.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_dangxuat.IconColor = System.Drawing.Color.Black;
@@ -120,11 +130,12 @@
             this.btn_dangxuat.Size = new System.Drawing.Size(300, 80);
             this.btn_dangxuat.TabIndex = 1;
             this.btn_dangxuat.Text = "Đăng xuất";
-            this.btn_dangxuat.UseVisualStyleBackColor = true;
+            this.btn_dangxuat.UseVisualStyleBackColor = false;
             // 
             // btn_admin
             // 
             this.btn_admin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_admin.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_admin.IconColor = System.Drawing.Color.Black;
@@ -147,6 +158,8 @@
             // 
             // panel_info
             // 
+            this.panel_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel_info.Controls.Add(this.lbl_info);
             this.panel_info.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_info.Location = new System.Drawing.Point(300, 0);
             this.panel_info.Name = "panel_info";
@@ -161,6 +174,17 @@
             this.panel_main.Size = new System.Drawing.Size(1282, 803);
             this.panel_main.TabIndex = 2;
             // 
+            // lbl_info
+            // 
+            this.lbl_info.AutoSize = true;
+            this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_info.Location = new System.Drawing.Point(6, 10);
+            this.lbl_info.Name = "lbl_info";
+            this.lbl_info.Size = new System.Drawing.Size(90, 31);
+            this.lbl_info.TabIndex = 0;
+            this.lbl_info.Text = "Home";
+            // 
             // AdminForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -172,6 +196,8 @@
             this.Text = "AdminForm";
             this.panel_sidebar.ResumeLayout(false);
             this.panel_admin.ResumeLayout(false);
+            this.panel_info.ResumeLayout(false);
+            this.panel_info.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +214,6 @@
         private FontAwesome.Sharp.IconButton btn_dangxuat;
         private System.Windows.Forms.Panel panel_info;
         private System.Windows.Forms.Panel panel_main;
+        private System.Windows.Forms.Label lbl_info;
     }
 }

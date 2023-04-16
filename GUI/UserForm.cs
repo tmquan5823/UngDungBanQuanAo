@@ -22,5 +22,34 @@ namespace GUI
             if(panel_user.Visible = false) { panel_user.Visible = true;}
             else { panel_user.Visible = false;}
         }
+
+        private void addUserControl(UserControl uc)
+        {
+            if (panel_main.Controls.Count > 0)
+            {
+                panel_main.Controls.Clear();
+            }
+            panel_main.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
+        }
+
+        private void btn_TTCaNhan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_QuanLySanPham_Click(object sender, EventArgs e)
+        {
+            UCTrangChu uc = new UCTrangChu();
+            addUserControl(uc);
+            lbl_info.Text = "Trang chủ";
+        }
+
+        private void btn_QuanLyDonHang_Click(object sender, EventArgs e)
+        {
+            UCDonHang uc = new UCDonHang();
+            addUserControl(uc);
+            lbl_info.Text = "Đơn hàng";
+        }
     }
 }

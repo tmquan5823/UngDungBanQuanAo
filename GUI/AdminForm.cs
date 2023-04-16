@@ -25,5 +25,28 @@ namespace GUI
             }
             else { panel_admin.Visible = false; }
         }
+        private void addUserControl(UserControl uc)
+        {
+            if (panel_main.Controls.Count > 0)
+            {
+                panel_main.Controls.Clear();
+            }
+            panel_main.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
+        }
+
+        private void btn_QuanLySanPham_Click(object sender, EventArgs e)
+        {
+            UCQuanLySanPham uc = new UCQuanLySanPham();
+            addUserControl(uc);
+            lbl_info.Text = "Quản lý sản phẩm";
+        }
+
+        private void btn_QuanLyDonHang_Click(object sender, EventArgs e)
+        {
+            UCQuanLyDonHang uc = new  UCQuanLyDonHang();
+            addUserControl(uc);
+            lbl_info.Text = "Quản lý đơn hàng";
+        }
     }
 }
