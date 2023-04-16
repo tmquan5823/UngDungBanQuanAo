@@ -10,6 +10,6 @@ namespace BLL
 {
     public class AccountBLL
     {
-        
+        public Boolean Cge
     }
 }

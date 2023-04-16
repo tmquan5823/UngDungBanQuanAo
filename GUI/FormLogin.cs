@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BLL;
 
 namespace GUI
 {
@@ -23,24 +25,16 @@ namespace GUI
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txt_username.Text == "admin")
-            {
-                AdminForm frm = new AdminForm();
-                this.Hide();
-                frm.ShowDialog();
-            }
-            if(txt_username.Text == "user")
-            {
-                UserForm frm = new UserForm();
-                this.Hide();
-                frm.ShowDialog();
-            }
+            Account account = new Account();
+            account.UserAccount = txt_username.Text;
+            account.UserPassword = txt_password.Text;   
+
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
             SignInForm frm = new SignInForm();
-            this.Dispose();
+            this.Hide();
             frm.ShowDialog();
         }
     }
