@@ -23,5 +23,10 @@ namespace GUI
             this.Dispose();
             frm.ShowDialog();
         }
+
+        private void SignInForm_Load(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.FromArgb(100, 0, 0, 0);
+        }
     }
 }

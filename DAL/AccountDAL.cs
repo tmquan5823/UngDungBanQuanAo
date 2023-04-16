@@ -22,7 +22,7 @@ namespace DAL
             SqlDataReader reader = sqlcmd.ExecuteReader();
             if (reader.Read())
             {
-                if (reader.GetString(1) == account.UserAccount)
+                if (reader.GetString(1) == account.UserPassword)
                 {
                     account.UserRole = reader.GetString(2);
                     reader.Close();
