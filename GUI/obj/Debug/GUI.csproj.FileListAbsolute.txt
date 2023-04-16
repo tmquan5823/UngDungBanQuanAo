@@ -60,7 +60,6 @@ C:\Users\OS\source\repos\UngDungBanQuanAo\GUI\bin\Debug\DTO.pdb
 =======
 C:\Users\tmqua\OneDrive\Desktop\UngDungBanQuanAo\GUI\obj\Debug\GUI.UCQuanLySanPham.resources
 >>>>>>> e50ebe9ca196b1df0e713de61dac1b9909d9b26b
-<<<<<<< HEAD
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\GUI\bin\Debug\GUI.exe.config
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\GUI\bin\Debug\GUI.exe
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\GUI\bin\Debug\GUI.pdb
@@ -84,7 +83,6 @@ C:\Users\PC\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.csproj.CoreCompileIn
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.exe
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.pdb
-=======
 C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\GUI\bin\Debug\GUI.exe.config
 C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\GUI\bin\Debug\GUI.exe
 C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\GUI\bin\Debug\GUI.pdb
@@ -112,3 +110,4 @@ C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.exe
 C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.pdb
 C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.SignInForm.resources
 >>>>>>> 029ef2e1a48a41c81a057d3b480e3df78d57b790
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.SignInForm.resources
