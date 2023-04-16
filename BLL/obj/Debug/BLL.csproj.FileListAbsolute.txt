@@ -1,0 +1,8 @@
+D:\.NET\UngDungBanQuanAo\BLL\bin\Debug\BLL.dll
+D:\.NET\UngDungBanQuanAo\BLL\bin\Debug\BLL.pdb
+D:\.NET\UngDungBanQuanAo\BLL\bin\Debug\FontAwesome.Sharp.dll
+D:\.NET\UngDungBanQuanAo\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\.NET\UngDungBanQuanAo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\.NET\UngDungBanQuanAo\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\.NET\UngDungBanQuanAo\BLL\obj\Debug\BLL.dll
+D:\.NET\UngDungBanQuanAo\BLL\obj\Debug\BLL.pdb
