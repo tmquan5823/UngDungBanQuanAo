@@ -73,6 +73,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _05d6c439e69f25b5f42cbe5f68bf75231 {
+            get {
+                object obj = ResourceManager.GetObject("05d6c439e69f25b5f42cbe5f68bf75231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1583824361_27_idee_clothing_store {
             get {
                 object obj = ResourceManager.GetObject("1583824361-27-idee-clothing-store", resourceCulture);
@@ -86,6 +96,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap img_0499_366x500 {
             get {
                 object obj = ResourceManager.GetObject("img-0499-366x500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_0499_366x5001 {
+            get {
+                object obj = ResourceManager.GetObject("img-0499-366x5001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

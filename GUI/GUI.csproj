@@ -67,6 +67,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDonHang.Designer.cs">
+      <DependentUpon>UCDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCQuanLyDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCQuanLyDonHang.Designer.cs">
+      <DependentUpon>UCQuanLyDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCQuanLySanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCQuanLySanPham.Designer.cs">
+      <DependentUpon>UCQuanLySanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTrangChu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTrangChu.Designer.cs">
+      <DependentUpon>UCTrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +113,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UCDonHang.resx">
+      <DependentUpon>UCDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCQuanLyDonHang.resx">
+      <DependentUpon>UCQuanLyDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCQuanLySanPham.resx">
+      <DependentUpon>UCQuanLySanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTrangChu.resx">
+      <DependentUpon>UCTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
