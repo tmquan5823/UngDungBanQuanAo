@@ -40,7 +40,7 @@ namespace GUI
         private void label7_Click(object sender, EventArgs e)
         {
             SignInForm frm = new SignInForm();
-            this.Hide();
+            this.Dispose();
             frm.ShowDialog();
         }
     }
