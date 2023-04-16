@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel_sidebar = new System.Windows.Forms.Panel();
-            this.panel_logo = new System.Windows.Forms.Panel();
-            this.panel_admin = new System.Windows.Forms.Panel();
-            this.panel_info = new System.Windows.Forms.Panel();
-            this.panel_main = new System.Windows.Forms.Panel();
             this.btn_TrangChu = new FontAwesome.Sharp.IconButton();
             this.btn_QuanLyDonHang = new FontAwesome.Sharp.IconButton();
             this.btn_QuanLySanPham = new FontAwesome.Sharp.IconButton();
+            this.panel_admin = new System.Windows.Forms.Panel();
             this.btn_dangxuat = new FontAwesome.Sharp.IconButton();
             this.btn_admin = new FontAwesome.Sharp.IconButton();
+            this.panel_logo = new System.Windows.Forms.Panel();
+            this.panel_info = new System.Windows.Forms.Panel();
+            this.panel_main = new System.Windows.Forms.Panel();
             this.panel_sidebar.SuspendLayout();
             this.panel_admin.SuspendLayout();
             this.SuspendLayout();
@@ -53,42 +53,8 @@
             this.panel_sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_sidebar.Location = new System.Drawing.Point(0, 0);
             this.panel_sidebar.Name = "panel_sidebar";
-            this.panel_sidebar.Size = new System.Drawing.Size(300, 753);
+            this.panel_sidebar.Size = new System.Drawing.Size(300, 853);
             this.panel_sidebar.TabIndex = 0;
-            // 
-            // panel_logo
-            // 
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(300, 205);
-            this.panel_logo.TabIndex = 0;
-            // 
-            // panel_admin
-            // 
-            this.panel_admin.Controls.Add(this.btn_dangxuat);
-            this.panel_admin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_admin.Location = new System.Drawing.Point(0, 285);
-            this.panel_admin.Name = "panel_admin";
-            this.panel_admin.Size = new System.Drawing.Size(300, 80);
-            this.panel_admin.TabIndex = 2;
-            this.panel_admin.Visible = false;
-            // 
-            // panel_info
-            // 
-            this.panel_info.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_info.Location = new System.Drawing.Point(300, 0);
-            this.panel_info.Name = "panel_info";
-            this.panel_info.Size = new System.Drawing.Size(1082, 50);
-            this.panel_info.TabIndex = 1;
-            // 
-            // panel_main
-            // 
-            this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_main.Location = new System.Drawing.Point(300, 50);
-            this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(1082, 703);
-            this.panel_main.TabIndex = 2;
             // 
             // btn_TrangChu
             // 
@@ -132,6 +98,16 @@
             this.btn_QuanLySanPham.Text = "Quản lý sản phẩm";
             this.btn_QuanLySanPham.UseVisualStyleBackColor = true;
             // 
+            // panel_admin
+            // 
+            this.panel_admin.Controls.Add(this.btn_dangxuat);
+            this.panel_admin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_admin.Location = new System.Drawing.Point(0, 285);
+            this.panel_admin.Name = "panel_admin";
+            this.panel_admin.Size = new System.Drawing.Size(300, 80);
+            this.panel_admin.TabIndex = 2;
+            this.panel_admin.Visible = false;
+            // 
             // btn_dangxuat
             // 
             this.btn_dangxuat.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -161,10 +137,34 @@
             this.btn_admin.UseVisualStyleBackColor = true;
             this.btn_admin.Click += new System.EventHandler(this.btn_admin_Click);
             // 
+            // panel_logo
+            // 
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(300, 205);
+            this.panel_logo.TabIndex = 0;
+            // 
+            // panel_info
+            // 
+            this.panel_info.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_info.Location = new System.Drawing.Point(300, 0);
+            this.panel_info.Name = "panel_info";
+            this.panel_info.Size = new System.Drawing.Size(1282, 50);
+            this.panel_info.TabIndex = 1;
+            // 
+            // panel_main
+            // 
+            this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_main.Location = new System.Drawing.Point(300, 50);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(1282, 803);
+            this.panel_main.TabIndex = 2;
+            // 
             // AdminForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1382, 753);
+            this.ClientSize = new System.Drawing.Size(1582, 853);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_info);
             this.Controls.Add(this.panel_sidebar);

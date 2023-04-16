@@ -117,23 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="05d6c439e69f25b5f42cbe5f68bf75231" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\05d6c439e69f25b5f42cbe5f68bf75231.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img-0499-366x500" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img-0499-366x500.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG-4860" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG-4860.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1583824361-27-idee-clothing-store" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1583824361-27-idee-clothing-store.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="05d6c439e69f25b5f42cbe5f68bf7523" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\05d6c439e69f25b5f42cbe5f68bf7523.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img-0499-366x5001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img-0499-366x5001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
