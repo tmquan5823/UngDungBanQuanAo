@@ -37,8 +37,8 @@
             this.btn_admin = new FontAwesome.Sharp.IconButton();
             this.panel_logo = new System.Windows.Forms.Panel();
             this.panel_info = new System.Windows.Forms.Panel();
-            this.panel_main = new System.Windows.Forms.Panel();
             this.lbl_info = new System.Windows.Forms.Label();
+            this.panel_main = new System.Windows.Forms.Panel();
             this.panel_sidebar.SuspendLayout();
             this.panel_admin.SuspendLayout();
             this.panel_info.SuspendLayout();
@@ -166,6 +166,17 @@
             this.panel_info.Size = new System.Drawing.Size(1282, 50);
             this.panel_info.TabIndex = 1;
             // 
+            // lbl_info
+            // 
+            this.lbl_info.AutoSize = true;
+            this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_info.Location = new System.Drawing.Point(6, 9);
+            this.lbl_info.Name = "lbl_info";
+            this.lbl_info.Size = new System.Drawing.Size(90, 31);
+            this.lbl_info.TabIndex = 0;
+            this.lbl_info.Text = "Home";
+            // 
             // panel_main
             // 
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -173,17 +184,6 @@
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1282, 803);
             this.panel_main.TabIndex = 2;
-            // 
-            // lbl_info
-            // 
-            this.lbl_info.AutoSize = true;
-            this.lbl_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbl_info.Location = new System.Drawing.Point(6, 10);
-            this.lbl_info.Name = "lbl_info";
-            this.lbl_info.Size = new System.Drawing.Size(90, 31);
-            this.lbl_info.TabIndex = 0;
-            this.lbl_info.Text = "Home";
             // 
             // AdminForm
             // 
