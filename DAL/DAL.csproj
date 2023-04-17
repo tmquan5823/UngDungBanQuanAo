@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="AccountDAL.cs" />
     <Compile Include="BillDAL.cs" />
-    <Compile Include="BillDetailDAL.cs" />
     <Compile Include="ClothesDAL.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

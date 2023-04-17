@@ -110,4 +110,8 @@ C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.exe
 C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.pdb
 C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.SignInForm.resources
 >>>>>>> 029ef2e1a48a41c81a057d3b480e3df78d57b790
+<<<<<<< HEAD
 C:\Users\tmqua\source\repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.UCThongTinCaNhan.resources
+=======
+C:\Users\PC\Source\Repos\UngDungBanQuanAo\GUI\obj\Debug\GUI.SignInForm.resources
+>>>>>>> cc22f0a31e07d3e11714ac6eabf80824cdf7ce41

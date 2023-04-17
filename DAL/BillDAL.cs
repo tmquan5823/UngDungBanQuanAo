@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using DTO;
 
 namespace DAL
@@ -11,6 +12,60 @@ namespace DAL
     public class BillDAL : Database
     {
         public static BillDAL getInstance = new BillDAL();
+        public List<Bill> getListBill()
+        {
+            List<Bill> list = new List<Bill>();
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "SELECT * FROM Bill ";
+            sqlcmd.Connection = sqlCon;
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Bill bill = new Bill();
+                bill.BillID = reader.GetInt32(0);
+                bill.UserID = reader.GetInt32(1);
+                bill.TotalPrice = reader.GetInt32(2);
+                bill.BuyDate = reader.GetDateTime(3);
+                bill.paymentMethod = reader.GetString(4);
+                bill.status = reader.GetString(5);
+                bill.Tel = reader.GetString(6);
+                bill.Address = reader.GetString(7);
+                bill.receiver = reader.GetString(8);
+                list.Add(bill);
+
+            }
+            reader.Close();
+            return list;
+        }
+        public List<Bill> getByCondition(string condition)
+        {
+            List<Bill> list = new List<Bill>();
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "SELECT * FROM Bill WHERE " + condition;
+            sqlcmd.Connection = sqlCon;
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Bill bill = new Bill();
+                bill.BillID = reader.GetInt32(0);
+                bill.UserID = reader.GetInt32(1);
+                bill.TotalPrice = reader.GetInt32(2);
+                bill.BuyDate = reader.GetDateTime(3);
+                bill.paymentMethod = reader.GetString(4);
+                bill.status = reader.GetString(5);
+                bill.Tel = reader.GetString(6);
+                bill.Address = reader.GetString(7);
+                bill.receiver = reader.GetString(8);
+                list.Add(bill);
+
+            }
+            reader.Close();
+            return list;
+        }
         public List<BillDetail> GetBillDetailListById(int idBill)
         {
             List<BillDetail> list = new List<BillDetail>();
@@ -33,6 +88,32 @@ namespace DAL
             }
             reader.Close();
             return list;
+        }
+        public Bill getBillByID(int ID)
+        {
+            Bill bill = new Bill();
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = @"SELECT * FROM Bill WHERE BillID = @Id";
+            sqlcmd.Connection = sqlCon;
+            sqlcmd.Parameters.Add("Id", System.Data.SqlDbType.Int).Value = ID;
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                bill.BillID = reader.GetInt32(0);
+                bill.UserID = reader.GetInt32(1);
+                bill.TotalPrice = reader.GetInt32(2);
+                bill.BuyDate = reader.GetDateTime(3);
+                bill.paymentMethod = reader.GetString(4);
+                bill.status = reader.GetString(5);
+                bill.Tel = reader.GetString(6);
+                bill.Address = reader.GetString(7);
+                bill.receiver = reader.GetString(8);
+            }
+            reader.Close();
+            return bill;
         }
         public List<Bill> GetBillListByUserId(int userId)
         {
