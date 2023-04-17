@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,16 @@ namespace GUI
 {
     public partial class UserForm : Form
     {
-        public UserForm()
+        Account account = new Account();
+        public UserForm(Account acc)
         {
             InitializeComponent();
+            account = acc;  
         }
 
         private void btn_admin_Click(object sender, EventArgs e)
         {
-            if(panel_user.Visible = false) { panel_user.Visible = true;}
+            if(panel_user.Visible == false) { panel_user.Visible = true;}
             else { panel_user.Visible = false;}
         }
 
@@ -35,7 +38,9 @@ namespace GUI
 
         private void btn_TTCaNhan_Click(object sender, EventArgs e)
         {
-
+            UCThongTinCaNhan uc = new UCThongTinCaNhan();
+            addUserControl(uc);
+            lbl_info.Text = "Thông tin cá nhân";
         }
 
         private void btn_QuanLySanPham_Click(object sender, EventArgs e)

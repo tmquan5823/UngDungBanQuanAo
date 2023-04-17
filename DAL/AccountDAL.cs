@@ -16,7 +16,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "select UserAccount, UserPassword, UserRole from Account where UserAccount = '" + account.UserAccount + "'";
+            sqlcmd.CommandText = "select UserAccount, UserPassword, UserRole from ACCOUNT where UserAccount = '" + account.UserAccount   + "'";
             sqlcmd.Connection = sqlCon;
 
             SqlDataReader reader = sqlcmd.ExecuteReader();

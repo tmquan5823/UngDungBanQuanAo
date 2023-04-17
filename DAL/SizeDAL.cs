@@ -5,15 +5,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DAL
 {
     public class SizeDAL : Database
     {
         public static SizeDAL Instance = new SizeDAL();
-        public List<Size> getListByClothesID(int ID)
+        public List<SizeClothes> getListByClothesID(int ID)
         {
-            List<Size> list = new List<Size>();
+            List<SizeClothes> list = new List<SizeClothes>();
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
@@ -23,7 +24,7 @@ namespace DAL
             SqlDataReader reader = sqlcmd.ExecuteReader();
             while (reader.Read())
             {
-                Size app = new Size();
+                SizeClothes app = new SizeClothes();
                 app.SizeID = reader.GetInt32(0);
                 app.NameSize = reader.GetString(1);
                 app.SizeID = reader.GetInt32(2);
@@ -33,9 +34,9 @@ namespace DAL
             reader.Close();
             return list;
         }
-        public Size getById(int ID)
+        public SizeClothes getById(int ID)
         {
-            Size app = new Size();
+            SizeClothes app = new SizeClothes();
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
@@ -62,7 +63,7 @@ namespace DAL
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }
-        public void AddClothes(Size u)
+        public void AddClothes(SizeClothes u)
         {
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
@@ -71,7 +72,7 @@ namespace DAL
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }
-        public void UpdateUserInfo(Size A)
+        public void UpdateUserInfo(SizeClothes A)
         {
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
@@ -80,6 +81,22 @@ namespace DAL
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
             return;
+        }
+
+        public int numberOfClothes(int id)
+        {
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "select * from size where ClothesID =" + id;
+            sqlcmd.Connection = sqlCon;
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+            int count = 0;
+            while (reader.Read()) {
+                count += reader.GetInt32(2);
+            }
+            reader.Close();
+            return count;
         }
     }
 }

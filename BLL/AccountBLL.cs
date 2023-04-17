@@ -10,6 +10,18 @@ namespace BLL
 {
     public class AccountBLL
     {
-        public Boolean Cge
+        AccountDAL accountDAL = new AccountDAL();
+        public Boolean CheckAccount(Account acc)
+        {
+            if(acc.UserAccount == "" || acc.UserPassword == "")
+            {
+                return false;
+            }
+            else
+            {
+                if(accountDAL.CheckAccount(acc)) { return true; }
+                else return false;
+            }
+        }
     }
 }

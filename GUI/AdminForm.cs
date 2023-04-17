@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace GUI
 {
     public partial class AdminForm : Form
     {
-        public AdminForm()
+        Account account = new Account();    
+        public AdminForm(Account acc)
         {
             InitializeComponent();
+            account = acc;  
         }
 
         private void btn_admin_Click(object sender, EventArgs e)
