@@ -49,5 +49,9 @@ namespace BLL
         {
             UserInfoDAL.getInstance.AddUserInfo(user);
         }
+        public UserInfo getUserByAccountID(int ID)
+        {
+            return UserInfoDAL.getInstance.getByAccountId(ID);
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "insert into UserInfo(Tel, Email, DateOfBirth, Sex, UserName, AccountID, Address) values('" + userInfo.Tel + "','" + userInfo.Email + "','" + userInfo.DateOfBirth.ToString("yyyy/MM/dd") + "', N'" + userInfo.Sex + "', N'" + userInfo.UserName + "', " + userInfo.AccountID + ", N'" + userInfo.Address + "')";
+            sqlcmd.CommandText = "insert into UserInfo(Tel, Email, DateOfBirth, Sex, UserName, AccountID, UserAddress) values('" + userInfo.Tel + "','" + userInfo.Email + "','" + userInfo.DateOfBirth.ToString("yyyy/MM/dd") + "', N'" + userInfo.Sex + "', N'" + userInfo.UserName + "', " + userInfo.AccountID + ", N'" + userInfo.Address + "')";
             sqlcmd.Connection = sqlCon;
             int kq = sqlcmd.ExecuteNonQuery();
             if (kq > 0) return true;
@@ -139,7 +139,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "insert into UserInfo(Tel, Email, DateOfBirth, Sex, UserName, AccountID) values('" + u.Tel + "', '" + u.Email + "', '" + Convert.ToDateTime(u.DateOfBirth) + "', '" + u.Sex + "', '" + u.UserName + "', '" + u.AccountID + ")";
+            sqlcmd.CommandText = "insert into UserInfo(Tel, Email, DateOfBirth, Sex, UserName, AccountID, UserAddress) values('" + u.Tel + "', '" + u.Email + "', '" + Convert.ToDateTime(u.DateOfBirth) + "', N'" + u.Sex + "', N'" + u.UserName + "', '" + u.AccountID + "', N'" + u.Address + "')";
             sqlcmd.Connection = sqlCon;
             int kq = sqlcmd.ExecuteNonQuery();
             if (kq > 0) return true;
@@ -152,7 +152,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "UPDATE UserInfo SET Tel  = '" + A.Tel + "', Email = '" + A.Email + "' , DateOfBirth = '" + A.DateOfBirth.ToString("yyyy-MM-dd") + "', Sex = '" + A.Sex + "', UserName = '" + A.UserName + "', Address = '" + A.Address + "' WHERE AccountId = " + A.AccountID;
+            sqlcmd.CommandText = "UPDATE UserInfo SET Tel  = '" + A.Tel + "', Email = '" + A.Email + "' , DateOfBirth = '" + A.DateOfBirth.ToString("yyyy-MM-dd") + "', Sex = '" + A.Sex + "', UserName = '" + A.UserName + "', UserAddress = '" + A.Address + "' WHERE AccountId = " + A.AccountID;
             sqlcmd.Connection = sqlCon;
             int kq = sqlcmd.ExecuteNonQuery();
             if (kq > 0) return true;

@@ -1,4 +1,5 @@
 ﻿using DTO;
+using BLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,7 +53,7 @@ namespace GUI
 
         private void btn_QuanLyDonHang_Click(object sender, EventArgs e)
         {
-            UCDonHang uc = new UCDonHang();
+            UCDonHang uc = new UCDonHang(UserInfoBLL.instance.getUserByAccountID(account.AccountID));
             addUserControl(uc);
             lbl_info.Text = "Đơn hàng";
         }
