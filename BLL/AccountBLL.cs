@@ -35,7 +35,7 @@ namespace BLL
 
         public Boolean ChangeAccountPassword(Account a, string pass)
         {
-            if(pass == "" || pass == a.UserPassword) { return false; }
+            if(pass == "" || pass == a.UserPassword || pass.Length < 6) { return false; }
             else return accountDAL.ChangeAccountPassword(a, pass);
         }
 
