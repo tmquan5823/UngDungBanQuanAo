@@ -95,6 +95,9 @@ namespace BLL
         {
             BillDAL.getInstance.AddBillByUserId(bill);
         }
-
+        public void addBillDetail(BillDetail bd)
+        {
+            BillDAL.getInstance.AddBillDetailByBillId(bd);
+        }
     }
 }

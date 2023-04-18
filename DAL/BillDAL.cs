@@ -238,8 +238,8 @@ namespace DAL
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
             sqlcmd.CommandText = @"
-            INSERT INTO Bill(UserID, TotalPrice, BuyDate, PaymentMethod, Billstatus, Tel, Address, Receiver)
-            VALUES(bill.UserID, bill.TotalPrice, bill.BuyDate, bill.paymentMethod,bill.status, bill.Tel, bill.Address, bill.receiver); ";
+            INSERT INTO Bill(UserID, TotalPrice, BuyDate, PaymentMethod, Billstatus, Tel, BillAddress, Receiver)
+            VALUES(" + bill.UserID + ", " + bill.TotalPrice + ", '" +bill.BuyDate.ToString("yyyy-MM-dd") + "', N'" + bill.paymentMethod +"', N'" + bill.status +"', '"+ bill.Tel +"', N'" + bill.Address + "', N'" + bill.receiver + "')";
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }
@@ -250,7 +250,7 @@ namespace DAL
             sqlcmd.CommandType = System.Data.CommandType.Text;
             sqlcmd.CommandText = @"
              INSERT INTO BillDetail(BillID, SizeID, BuyQuatity, Price) 
-             VALUES(billDetail.BillID, billDetail.SizeID, billDetail.BuyQuantity, billDetail.Price);";
+             VALUES( "+ billDetail.BillID + ", " + billDetail.SizeID + ", " + billDetail.BuyQuantity + ", " + billDetail.Price + ");";
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }

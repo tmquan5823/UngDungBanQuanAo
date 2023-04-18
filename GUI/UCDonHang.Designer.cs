@@ -300,7 +300,6 @@
             this.cbx_PTThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_PTThanhToan.FormattingEnabled = true;
             this.cbx_PTThanhToan.Items.AddRange(new object[] {
-            "",
             "Ví VNPay",
             "Ví Momo",
             "Thanh toán khi nhận hàng"});

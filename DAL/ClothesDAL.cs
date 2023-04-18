@@ -113,7 +113,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "select * from Clothes where ClothesName = '" + ID + "'";
+            sqlcmd.CommandText = "select * from Clothes where ClothesName = N'" + ID + "'";
             sqlcmd.Connection = sqlCon;
 
             SqlDataReader reader = sqlcmd.ExecuteReader();

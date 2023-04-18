@@ -15,6 +15,8 @@ namespace GUI
     public partial class UCDonHang : UserControl
     {
         UserInfo ui = new UserInfo();
+        Bill bl = new Bill();
+        List<BillDetail> listBD = new List<BillDetail>();
         public UCDonHang(UserInfo ui)
         {
             InitializeComponent();
@@ -22,6 +24,12 @@ namespace GUI
             HienThiBill();
             AddCbxSanPham();
         }
+
+        public UCDonHang(Clothes clo)
+        {
+
+        }
+
         public void HienThiBill()
         {
             listBill.Items.Clear();
@@ -38,6 +46,7 @@ namespace GUI
         }
         public void AddCbxSanPham()
         {
+            cbx_SanPham.Items.Clear();
             List<Clothes> clothes = ClothesBLL.instance.getList();
             foreach(var item in clothes)
             {
@@ -95,7 +104,32 @@ namespace GUI
 
         private void btn_XacNhanDonHang_Click(object sender, EventArgs e)
         {
-
+            if(listBD.Count == 0)
+            {
+                MessageBox.Show("Hiện tại trong giỏ hàng bạn không có quần áo nào cả");
+                return;
+            }
+            else
+            {
+                ShowSanPhamBackUp();
+                DialogResult dr =  MessageBox.Show("Bạn có đồng ý với các thông tin trên hăn","Xác nhận", MessageBoxButtons.YesNo);
+                if(dr == DialogResult.Yes)
+                {
+                    BillBLL.getInstance.addBill(bl);
+                    foreach(var item in listBD)
+                    {
+                        BillBLL.getInstance.addBillDetail(item);
+                        SizeClothes sc = SizeBLL.instance.getByID(item.SizeID);
+                        SizeBLL.instance.UpdateNumberOfSize(sc.NameSize, sc.clothesID, sc.quantity - item.BuyQuantity);
+                        ShowSanPhamBackUp();
+                    }
+                }
+                else
+                {
+                    btn_Reset_Click(sender, e);
+                }
+            }
+            HienThiBill();
         }
 
         private void lv_SanPham_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,16 +144,45 @@ namespace GUI
             }
         }
 
+        public void ShowSanPhamBackUp()
+        {
+            txt_TenNguoiNhan.Text = bl.receiver.ToString();
+            txt_DiaChi.Text = bl.Address.ToString();
+            txt_SDT.Text = bl.Tel.ToString();
+            cbx_PTThanhToan.Text = bl.paymentMethod.ToString();
+
+            int total = 0;
+            foreach(var item in listBD)
+            {
+                total += (item.BuyQuantity * item.Price);
+            }
+
+            lbl_TongTien.Text = total + "";
+
+            lv_SanPham.Items.Clear();
+            foreach (var item in listBD)
+            {
+                SizeClothes SClo = SizeBLL.instance.getByID(item.SizeID);
+                Clothes Clo = ClothesBLL.instance.getClothesByID(SClo.clothesID);
+                ListViewItem lvi = new ListViewItem(SClo.clothesID + "");
+                lvi.SubItems.Add(Clo.clothesName);
+                lvi.SubItems.Add(SClo.NameSize);
+                lvi.SubItems.Add(Clo.price + "");
+                lvi.SubItems.Add(item.BuyQuantity + "");
+                lv_SanPham.Items.Add(lvi);
+            }
+        }
+
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            if(lv_SanPham.Items.Count == 0)
+            if (listBD.Count == 0)
             {
-                if(txt_TenNguoiNhan.Text == "" || txt_DiaChi.Text == "" || txt_SDT.Text == "" || txt_SoLuongSize.Text == "" || cbx_SanPham.Text == "" || cbx_PTThanhToan.Text == "" || cbx_KichThuoc.Text == "")
+                if (txt_TenNguoiNhan.Text == "" || txt_SDT.Text == "" || txt_DiaChi.Text == "" || txt_SoLuongSize.Text == "" || cbx_KichThuoc.Text == "" || cbx_PTThanhToan.Text == "" || cbx_SanPham.Text == "")
                 {
-                    MessageBox.Show("Vui lòng nhập và chọn đầy đủ thông tin để thêm vào");
-                    return;
+                    MessageBox.Show("Vui lòng nhập và điền đầy đủ thông tin !!!");
                 }
-                Bill bl = new Bill();
+
+                bl.BillID = BillBLL.getInstance.getListBill().Count + 1;
                 bl.paymentMethod = cbx_PTThanhToan.Text;
                 bl.Tel = txt_SDT.Text;
                 bl.Address = txt_DiaChi.Text;
@@ -128,6 +191,7 @@ namespace GUI
                 bl.BuyDate = DateTime.Now;
                 bl.UserID = ui.UserID;
 
+                // Lấy Clothes
                 Clothes clo = ClothesBLL.instance.getClothesByName(cbx_SanPham.Text);
 
                 SizeClothes siz = new SizeClothes();
@@ -137,31 +201,64 @@ namespace GUI
 
                 int quantity = Int32.Parse(txt_SoLuongSize.Text);
 
-                if(quantity > sz.quantity)
+                if (quantity > sz.quantity)
                 {
-                    MessageBox.Show("Số lượng bạn muốn mua nhiều hơn số lượng có trong kho không thể mua được !!");
+                    MessageBox.Show("Số lượng bạn muốn mua nhiều hơn số lượng có trong kho là: " + sz.quantity + " nên không thể mua được !!");
                     return;
                 }
-                
+
                 BillDetail bd = new BillDetail();
                 bd.BuyQuantity = quantity;
                 bd.Price = clo.price * quantity;
                 bd.SizeID = sz.SizeID;
 
                 bl.TotalPrice = bd.Price;
-                BillBLL.getInstance.addBill(bl);
 
+                bd.BillID = bl.BillID;
 
-                sz.quantity -= quantity;
-                SizeBLL.instance.UpdateNumberOfSize(SizeName, clo.clothesID, sz.quantity);
-                HienThiSanPham(bd.BillID);
+                listBD.Add(bd);
 
+                //sz.quantity -= quantity; Xác nhận
+                //SizeBLL.instance.UpdateNumberOfSize(SizeName, clo.clothesID, sz.quantity);
+            }
+            else
+            {
+                if (cbx_SanPham.Text == "" || cbx_KichThuoc.Text == "" || txt_SoLuongSize.Text == "")
+                {
+                    MessageBox.Show("Vui Lòng nhập đầy đủ thông tin sản phẩm kích cỡ à số lượng !!");
+                    return;
+                }
+                Clothes clo = ClothesBLL.instance.getClothesByName(cbx_SanPham.Text);
+
+                SizeClothes siz = new SizeClothes();
+                string SizeName = cbx_KichThuoc.Text.Substring(5);
+                int CloID = clo.clothesID;
+                SizeClothes sz = SizeBLL.instance.getSizeByNameAndClothesID(SizeName, CloID);
+
+                int quantity = Int32.Parse(txt_SoLuongSize.Text);
+
+                if (quantity > sz.quantity)
+                {
+                    MessageBox.Show("Số lượng bạn muốn mua nhiều hơn số lượng có trong kho là: " + sz.quantity + " nên không thể mua được !!");
+                    return;
+                }
+
+                BillDetail bd = new BillDetail();
+                bd.BuyQuantity = quantity;
+                bd.Price = clo.price * quantity;
+                bd.SizeID = sz.SizeID;
+
+                bl.TotalPrice += bd.Price;
+
+                bd.BillID = bl.BillID;
+
+                listBD.Add(bd);
             }
 
-
-
-            AddCbxSanPham();
+            ShowSanPhamBackUp();
         }
+
+
 
         private void btn_HuyDon_Click(object sender, EventArgs e)
         {
@@ -190,6 +287,18 @@ namespace GUI
             cbx_PTThanhToan.Text = string.Empty;
             cbx_KichThuoc.Text = string.Empty;
             cbx_SanPham.Text = string.Empty;
+
+            bl.Tel = "";
+            bl.Address = "";
+            bl.receiver = string.Empty;
+            bl.paymentMethod = string.Empty;
+            bl.UserID = -1;
+            bl.status = string.Empty;
+            bl.BuyDate = DateTime.MinValue; 
+            bl.TotalPrice = 0;
+            bl.BillID = -1;
+
+            listBD.Clear();
         }
     }
 }
