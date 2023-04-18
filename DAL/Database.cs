@@ -11,7 +11,7 @@ namespace DAL
     {
         //public string strCon = @"Data Source=LAPTOP-0IQ7Q3Q3;Initial Catalog=DOTNET;Integrated Security=True";
         //public string strCon = @"Data Source=DESKTOP-98HRCRQ\SQLEXPRESS;Initial Catalog=DOTNET;Integrated Security=True";
-        public string strCon = @"Data Source=LAPTOP-D43G7L68\SQLEXPRESS;Initial Catalog=DOTNET;Integrated Security=True";
+         public string strCon = @"Data Source=LAPTOP-FAE46JCQ\QUOCMINH;Initial Catalog=DOTNET;User ID=sa;Password=123456";
 
 
         public SqlConnection sqlCon = null;

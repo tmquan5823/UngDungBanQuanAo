@@ -34,8 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_diachi = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dtp_birthday = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_sdt = new System.Windows.Forms.TextBox();
@@ -46,16 +44,16 @@
             this.btn_chinhsua = new System.Windows.Forms.Button();
             this.btn_luu = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_xacnhanmk = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_mkmoi = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_mkhientai = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txt_tendangnhap = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btn_doimk = new System.Windows.Forms.Button();
             this.btn_luuMK = new System.Windows.Forms.Button();
-            this.txt_mkhientai = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_mkmoi = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_xacnhanmk = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel_gioitinh.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -123,24 +121,6 @@
             this.label6.TabIndex = 39;
             this.label6.Text = "Email";
             // 
-            // txt_diachi
-            // 
-            this.txt_diachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_diachi.Location = new System.Drawing.Point(64, 323);
-            this.txt_diachi.Name = "txt_diachi";
-            this.txt_diachi.Size = new System.Drawing.Size(650, 30);
-            this.txt_diachi.TabIndex = 38;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(59, 295);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 25);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Địa chỉ";
-            // 
             // dtp_birthday
             // 
             this.dtp_birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,8 +181,6 @@
             this.groupBox1.Controls.Add(this.panel_gioitinh);
             this.groupBox1.Controls.Add(this.txt_email);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txt_diachi);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dtp_birthday);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txt_sdt);
@@ -226,6 +204,7 @@
             this.btn_chinhsua.TabIndex = 43;
             this.btn_chinhsua.Text = "Chỉnh sửa";
             this.btn_chinhsua.UseVisualStyleBackColor = true;
+            this.btn_chinhsua.Click += new System.EventHandler(this.btn_chinhsua_Click);
             // 
             // btn_luu
             // 
@@ -236,6 +215,7 @@
             this.btn_luu.TabIndex = 44;
             this.btn_luu.Text = "Lưu";
             this.btn_luu.UseVisualStyleBackColor = true;
+            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
             // groupBox2
             // 
@@ -254,6 +234,60 @@
             this.groupBox2.TabIndex = 43;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin tài khoản";
+            // 
+            // txt_xacnhanmk
+            // 
+            this.txt_xacnhanmk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_xacnhanmk.Location = new System.Drawing.Point(62, 299);
+            this.txt_xacnhanmk.Name = "txt_xacnhanmk";
+            this.txt_xacnhanmk.Size = new System.Drawing.Size(346, 30);
+            this.txt_xacnhanmk.TabIndex = 38;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(61, 271);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(181, 25);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Xác nhận mật khẩu";
+            // 
+            // txt_mkmoi
+            // 
+            this.txt_mkmoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mkmoi.Location = new System.Drawing.Point(64, 228);
+            this.txt_mkmoi.Name = "txt_mkmoi";
+            this.txt_mkmoi.Size = new System.Drawing.Size(346, 30);
+            this.txt_mkmoi.TabIndex = 36;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(59, 200);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(129, 25);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Mật khẩu mới";
+            // 
+            // txt_mkhientai
+            // 
+            this.txt_mkhientai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mkhientai.Location = new System.Drawing.Point(64, 152);
+            this.txt_mkhientai.Name = "txt_mkhientai";
+            this.txt_mkhientai.Size = new System.Drawing.Size(346, 30);
+            this.txt_mkhientai.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(59, 124);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 25);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Mật khẩu hiện tại";
             // 
             // txt_tendangnhap
             // 
@@ -283,6 +317,7 @@
             this.btn_doimk.TabIndex = 45;
             this.btn_doimk.Text = "Đổi mật khẩu";
             this.btn_doimk.UseVisualStyleBackColor = true;
+            this.btn_doimk.Click += new System.EventHandler(this.btn_doimk_Click);
             // 
             // btn_luuMK
             // 
@@ -293,60 +328,7 @@
             this.btn_luuMK.TabIndex = 46;
             this.btn_luuMK.Text = "Lưu";
             this.btn_luuMK.UseVisualStyleBackColor = true;
-            // 
-            // txt_mkhientai
-            // 
-            this.txt_mkhientai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mkhientai.Location = new System.Drawing.Point(64, 152);
-            this.txt_mkhientai.Name = "txt_mkhientai";
-            this.txt_mkhientai.Size = new System.Drawing.Size(346, 30);
-            this.txt_mkhientai.TabIndex = 34;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(59, 124);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 25);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Mật khẩu hiện tại";
-            // 
-            // txt_mkmoi
-            // 
-            this.txt_mkmoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mkmoi.Location = new System.Drawing.Point(64, 228);
-            this.txt_mkmoi.Name = "txt_mkmoi";
-            this.txt_mkmoi.Size = new System.Drawing.Size(346, 30);
-            this.txt_mkmoi.TabIndex = 36;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(59, 200);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 25);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "Mật khẩu mới";
-            // 
-            // txt_xacnhanmk
-            // 
-            this.txt_xacnhanmk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_xacnhanmk.Location = new System.Drawing.Point(62, 299);
-            this.txt_xacnhanmk.Name = "txt_xacnhanmk";
-            this.txt_xacnhanmk.Size = new System.Drawing.Size(346, 30);
-            this.txt_xacnhanmk.TabIndex = 38;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(57, 271);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(181, 25);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Xác nhận mật khẩu";
+            this.btn_luuMK.Click += new System.EventHandler(this.btn_luuMK_Click);
             // 
             // UCThongTinCaNhan
             // 
@@ -377,8 +359,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_diachi;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtp_birthday;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_sdt;

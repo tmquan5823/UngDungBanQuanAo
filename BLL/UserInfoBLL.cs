@@ -16,5 +16,18 @@ namespace BLL
         {
             return UserInfoDAL.getInstance.getById(ID);
         }
+        public void insertUserInfo(UserInfo user)
+        {
+            UserInfoDAL.getInstance.AddUserInfo(user);
+        }
+        public void updateUserInfo(UserInfo user, int Id)
+        {
+            UserInfoDAL.getInstance.UpdateUserInfo(user, Id);
+        }
+
+      
+      
+
+   
     }
 }
