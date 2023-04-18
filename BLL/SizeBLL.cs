@@ -32,5 +32,9 @@ namespace BLL
         {
             SizeDAL.Instance.updateNumberOfSize(Size, CloID, quantity);
         }
+        public void AddSize(SizeClothes s)
+        {
+            SizeDAL.Instance.AddSize(s);
+        }
     }
 }

@@ -43,5 +43,9 @@ namespace BLL
         {
             ClothesDAL.instance.UpdateUserInfo(clo);
         }
+        public void addClothes(Clothes clo)
+        {
+            ClothesDAL.instance.AddClothes(clo);
+        }
     }
 }

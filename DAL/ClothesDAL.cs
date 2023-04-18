@@ -143,7 +143,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "insert into Clothes (ClothesName, Price, Origin, Color, ClothesDescription) values(N'" + u.clothesName + "', " + u.price + ", N'" + u.origin + "', N'" + u.color + "', N'" + u.clothesDescription + "')";
+            sqlcmd.CommandText = "insert into Clothes (ClothesName, Price, Origin, Color, ClothesDescription) values( N'" + u.clothesName + "', " + u.price + ", N'" + u.origin + "', N'" + u.color + "', N'" + u.clothesDescription + "')";
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }

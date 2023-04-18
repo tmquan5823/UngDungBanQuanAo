@@ -175,7 +175,31 @@ namespace GUI
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            
+            if (txt_MauSac == null || txt_MoTa == null || txt_TenSanPham == null || txt_XuatXu == null || txt_Gia == null)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin !!!!");
+                return;
+            }
+            else if (cbx_Size.SelectedIndex == 0 && txt_SoLuongSize == null)
+            {
+                MessageBox.Show("Vui lòng chọn size và nhập số lượng cho size tương ứng !!");
+                return;
+            }
+            int ClothesID = Int32.Parse(txt_IDSanPham.Text);
+            string ClothesName = txt_TenSanPham.Text;
+            string Color = txt_MauSac.Text;
+            string description = txt_MoTa.Text;
+            string origin = txt_XuatXu.Text;
+            int price = Int32.Parse(txt_Gia.Text);
+
+            Clothes clo = new Clothes(ClothesID, ClothesName, price, origin, Color, description);
+
+            ClothesBLL.instance.addClothes(clo);
+            String Size = cbx_Size.SelectedItem.ToString().Substring(5);
+            int quantity = Int32.Parse(txt_SoLuongSize.Text);
+
+            SizeBLL.instance.AddSize(new SizeClothes(0, Size, quantity, ClothesID));
+            showListSanPham();
         }
     }
 }

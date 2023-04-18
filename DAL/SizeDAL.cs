@@ -54,7 +54,7 @@ namespace DAL
             reader.Close();
             return app;
         }
-        public void RemoveClothes(int id)
+        public void RemoveSize(int id)
         {
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
@@ -63,7 +63,7 @@ namespace DAL
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }
-        public void AddClothes(SizeClothes u)
+        public void AddSize(SizeClothes u)
         {
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
