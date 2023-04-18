@@ -1,14 +1,3 @@
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\bin\Debug\DAL.dll
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\bin\Debug\DAL.pdb
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\bin\Debug\DTO.dll
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\bin\Debug\DTO.pdb
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CopyComplete
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.dll
-C:\Users\OS\source\repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.pdb
-<<<<<<< HEAD
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DAL.dll
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DAL.pdb
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DTO.dll
@@ -19,25 +8,3 @@ C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CoreCompileIn
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.dll
 C:\Users\PC\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.pdb
-=======
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DAL.dll
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DAL.pdb
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DTO.dll
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\bin\Debug\DTO.pdb
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.csproj.CopyComplete
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.dll
-C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DAL\obj\Debug\DAL.pdb
->>>>>>> 029ef2e1a48a41c81a057d3b480e3df78d57b790
-C:\Users\PC\source\repos\cODE2\DAL\bin\Debug\DAL.dll
-C:\Users\PC\source\repos\cODE2\DAL\bin\Debug\DAL.pdb
-C:\Users\PC\source\repos\cODE2\DAL\bin\Debug\DTO.dll
-C:\Users\PC\source\repos\cODE2\DAL\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\PC\source\repos\cODE2\DAL\bin\Debug\DTO.pdb
-C:\Users\PC\source\repos\cODE2\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\Users\PC\source\repos\cODE2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\PC\source\repos\cODE2\DAL\obj\Debug\DAL.csproj.CopyComplete
-C:\Users\PC\source\repos\cODE2\DAL\obj\Debug\DAL.dll
-C:\Users\PC\source\repos\cODE2\DAL\obj\Debug\DAL.pdb
