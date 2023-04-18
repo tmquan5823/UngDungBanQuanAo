@@ -23,10 +23,10 @@ namespace GUI
         public void HienThiHoaDon()
         {
             List<Bill> bills = BillBLL.getInstance.getListBill();
+            listBill.Items.Clear();
             foreach (Bill bill in bills)
             {
-                ListViewItem item = new ListViewItem();
-                item.SubItems.Add(bill.BillID + "");
+                ListViewItem item = new ListViewItem(bill.BillID + "");
                 item.SubItems.Add(bill.UserID + "");
                 int UserID = bill.UserID;
                 UserInfo person = UserInfoBLL.instance.getUserByID(UserID);
@@ -52,18 +52,23 @@ namespace GUI
                 lbl_TongTien.Text = lvi.SubItems[4].Text;
                 txt_TinhTrang.Text = lvi.SubItems[5].Text;
                 txt_PTThanhToan.Text = bill1.paymentMethod.ToString();
+
+                // Hiển thị BillDetail
                 List<BillDetail> listBD = BillBLL.getInstance.getBillDetailByBillID(IDHoaDon);
-                listViewSanPham.Clear();
+                listViewSanPham.Items.Clear();
+                
                 foreach(BillDetail bd in listBD)
                 {
-                    ListViewItem lvi2 =new ListViewItem();
                     DTO.SizeClothes temp2 = SizeBLL.instance.getByID(bd.SizeID);
                     Clothes temp = ClothesBLL.instance.getClothesByID(temp2.clothesID);
-                    lvi2.SubItems.Add(temp.clothesID + "");
+                    ListViewItem lvi2 = new ListViewItem(temp.clothesID + "");
+
+                    
                     lvi2.SubItems.Add(temp.clothesName);
                     lvi2.SubItems.Add(temp2.NameSize);
                     lvi2.SubItems.Add(bd.Price + "");
                     lvi2.SubItems.Add(bd.BuyQuantity + "");
+                    
                     listViewSanPham.Items.Add(lvi2);
                 }
             }
@@ -79,6 +84,7 @@ namespace GUI
             int BillID = Int32.Parse(txt_IDHoaDon.Text);
             BillBLL.getInstance.updateBillStatus(BillID, "Đã hủy đơn");
             MessageBox.Show("Đã lưu trạng thái thành công");
+            HienThiHoaDon();
         }
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
@@ -91,16 +97,49 @@ namespace GUI
             int BillID = Int32.Parse(txt_IDHoaDon.Text);
             BillBLL.getInstance.updateBillStatus(BillID, "Đã xác nhận");
             MessageBox.Show("Đã lưu trạng thái thành công");
+            HienThiHoaDon();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void HienThiBillByStatus(string status)
         {
-
+            List<Bill> bills = BillBLL.getInstance.getListBillByStatus(status);
+            listBill.Items.Clear();
+            foreach (Bill bill in bills)
+            {
+                ListViewItem item = new ListViewItem(bill.BillID + "");
+                item.SubItems.Add(bill.UserID + "");
+                int UserID = bill.UserID;
+                UserInfo person = UserInfoBLL.instance.getUserByID(UserID);
+                item.SubItems.Add(person.UserName);
+                item.SubItems.Add(bill.BuyDate.ToString());
+                item.SubItems.Add(bill.TotalPrice + "");
+                item.SubItems.Add(bill.status);
+                listBill.Items.Add(item);
+            }
         }
 
-        private void dtp_billinday_ValueChanged(object sender, EventArgs e)
+        private void cbx_TinhTrang_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if(cbx_TinhTrang.SelectedItem.ToString() == "Chưa xác nhận")
+            {
+                HienThiBillByStatus("Chưa xác nhận");
+                lbl_TongTien.Text = BillBLL.getInstance.getTotalBillsByStatus("Chưa xác nhận") + "";
+            }
+            else if (cbx_TinhTrang.SelectedItem.ToString() == "Đã xác nhận")
+            {
+                HienThiBillByStatus("Đã xác nhận");
+                lbl_TongTien.Text = BillBLL.getInstance.getTotalBillsByStatus("Đã xác nhận") + "";
+            }
+            else if (cbx_TinhTrang.SelectedItem.ToString() == "Đã hủy đơn")
+            {
+                HienThiBillByStatus("Đã hủy đơn");
+                lbl_TongTien.Text = BillBLL.getInstance.getTotalBillsByStatus("Đã hủy đơn") + "";
+            }
+            else if (cbx_TinhTrang.SelectedItem.ToString() == "Tất cả")
+            {
+                HienThiHoaDon();
+                lbl_TongTien.Text = BillBLL.getInstance.getTotalPriceAllBills() + "";
+            }
         }
     }
 }

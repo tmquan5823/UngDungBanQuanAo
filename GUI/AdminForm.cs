@@ -51,5 +51,11 @@ namespace GUI
             addUserControl(uc);
             lbl_info.Text = "Quản lý đơn hàng";
         }
+
+        private void btn_dangxuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormLogin();
+        }
     }
 }

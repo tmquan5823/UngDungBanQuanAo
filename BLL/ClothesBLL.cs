@@ -23,5 +23,29 @@ namespace BLL
         {
             return ClothesDAL.instance.getById(ID);
         }
+        public Clothes getClothesByName(string Name)
+        {
+            return ClothesDAL.instance.getByName(Name);
+        }
+        public List<Clothes> getListByValue(String Value)
+        {
+            return cDAL.getListByValue(Value);
+        }
+        public void deleteClothesByID(int ID)
+        {
+            ClothesDAL.instance.RemoveClothes(ID);
+        }
+        public Boolean checkInputID(int ID)
+        {
+            return ClothesDAL.instance.checkInputID(ID);
+        }
+        public void UpdateClothes(Clothes clo)
+        {
+            ClothesDAL.instance.UpdateUserInfo(clo);
+        }
+        public void addClothes(Clothes clo)
+        {
+            ClothesDAL.instance.AddClothes(clo);
+        }
     }
 }

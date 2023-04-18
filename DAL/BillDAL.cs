@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DAL
 {
@@ -39,6 +40,70 @@ namespace DAL
             reader.Close();
             return list;
         }
+
+        public int getTotalBillsByStatus(string status)
+        {
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "select * from Bill where BillStatus = N'" + status + "'";
+            sqlcmd.Connection = sqlCon;
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+            int TotalPrice = 0;
+            while (reader.Read())
+            {
+                TotalPrice += reader.GetInt32(2);
+            }
+            reader.Close();
+            return TotalPrice;
+        }
+        public int getTotalPriceAllBill()
+        {
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "select TotalPrice from Bill ";
+            sqlcmd.Connection = sqlCon;
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+            int TotalPrice = 0;
+            while (reader.Read())
+            {
+                TotalPrice += reader.GetInt32(0);
+            }
+            reader.Close();
+            return TotalPrice;
+        }
+
+        
+
+        public List<Bill> getListBillByStatus(string Status)
+        {
+            List<Bill> list = new List<Bill>();
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "SELECT * FROM Bill WHERE BillStatus = N'" + Status + "'";
+            sqlcmd.Connection = sqlCon;
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Bill bill = new Bill();
+                bill.BillID = reader.GetInt32(0);
+                bill.UserID = reader.GetInt32(1);
+                bill.TotalPrice = reader.GetInt32(2);
+                bill.BuyDate = reader.GetDateTime(3);
+                bill.paymentMethod = reader.GetString(4);
+                bill.status = reader.GetString(5);
+                bill.Tel = reader.GetString(6);
+                bill.Address = reader.GetString(7);
+                bill.receiver = reader.GetString(8);
+                list.Add(bill);
+
+            }
+            reader.Close();
+            return list;
+        }
+
         public List<Bill> getByCondition(string condition)
         {
             List<Bill> list = new List<Bill>();
@@ -66,15 +131,16 @@ namespace DAL
             reader.Close();
             return list;
         }
+
+        
         public List<BillDetail> GetBillDetailListById(int idBill)
         {
             List<BillDetail> list = new List<BillDetail>();
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = @"SELECT * FROM BillDetail WHERE BillID = @Id";
+            sqlcmd.CommandText = @"SELECT * FROM BillDetail WHERE BillID = " + idBill;
             sqlcmd.Connection = sqlCon;
-            sqlcmd.Parameters.Add("Id", System.Data.SqlDbType.Int).Value = idBill;
             SqlDataReader reader = sqlcmd.ExecuteReader();
 
             while (reader.Read())
@@ -194,7 +260,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "UPDATE Bill SET BillStatus  = '" + Status +  "' WHERE BillID = " + BillID;
+            sqlcmd.CommandText = "UPDATE Bill SET BillStatus  = N'" + Status +  "' WHERE BillID = " + BillID;
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
             return;

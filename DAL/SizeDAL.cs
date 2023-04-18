@@ -27,7 +27,7 @@ namespace DAL
                 SizeClothes app = new SizeClothes();
                 app.SizeID = reader.GetInt32(0);
                 app.NameSize = reader.GetString(1);
-                app.SizeID = reader.GetInt32(2);
+                app.quantity = reader.GetInt32(2);
                 app.clothesID = reader.GetInt32(3);
                 list.Add(app);
             }
@@ -48,13 +48,13 @@ namespace DAL
             {
                 app.SizeID = reader.GetInt32(0);
                 app.NameSize = reader.GetString(1);
-                app.SizeID = reader.GetInt32(2);
+                app.quantity = reader.GetInt32(2);
                 app.clothesID = reader.GetInt32(3);
             }
             reader.Close();
             return app;
         }
-        public void RemoveClothes(int id)
+        public void RemoveSize(int id)
         {
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
@@ -63,7 +63,7 @@ namespace DAL
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }
-        public void AddClothes(SizeClothes u)
+        public void AddSize(SizeClothes u)
         {
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
@@ -88,7 +88,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "select * from size where ClothesID =" + id;
+            sqlcmd.CommandText = "select * from Size where ClothesID =" + id;
             sqlcmd.Connection = sqlCon;
             SqlDataReader reader = sqlcmd.ExecuteReader();
             int count = 0;
@@ -97,6 +97,38 @@ namespace DAL
             }
             reader.Close();
             return count;
+        }
+
+        public SizeClothes getNumberBySizeAndClothesID(string Size, int ID)
+        {
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "select * from Size where ClothesID = " + ID + " AND NameSize = '" + Size + "'" ;
+            sqlcmd.Connection = sqlCon;
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+            SizeClothes app = new SizeClothes();
+            while (reader.Read())
+            {
+                app.SizeID = reader.GetInt32(0);
+                app.NameSize = reader.GetString(1);
+                app.quantity = reader.GetInt32(2);
+                app.clothesID = reader.GetInt32(3);
+            }
+            reader.Close();
+            return app;
+
+        }
+
+        public void updateNumberOfSize(string Size, int cloID, int quantity)
+        {
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "UPDATE Size SET Quantity  = " + quantity + " WHERE NameSize = '" + Size  + "' AND ClothesID = " + cloID ;
+            sqlcmd.Connection = sqlCon;
+            sqlcmd.ExecuteNonQuery();
+            return;
         }
     }
 }

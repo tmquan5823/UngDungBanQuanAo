@@ -53,10 +53,8 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_TinhTrang = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dtp_billinday = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.listBill = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -291,30 +289,28 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbx_TinhTrang);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.dtp_billinday);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.listBill);
             this.panel1.Location = new System.Drawing.Point(8, 394);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1258, 392);
             this.panel1.TabIndex = 1;
             // 
-            // comboBox1
+            // cbx_TinhTrang
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "",
+            this.cbx_TinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_TinhTrang.FormattingEnabled = true;
+            this.cbx_TinhTrang.Items.AddRange(new object[] {
             "Chưa xác nhận",
-            "Đã xác nhân",
-            "Đã hủy đơn"});
-            this.comboBox1.Location = new System.Drawing.Point(138, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 33);
-            this.comboBox1.TabIndex = 25;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            "Đã xác nhận",
+            "Đã hủy đơn",
+            "Tất cả"});
+            this.cbx_TinhTrang.Location = new System.Drawing.Point(138, 45);
+            this.cbx_TinhTrang.Name = "cbx_TinhTrang";
+            this.cbx_TinhTrang.Size = new System.Drawing.Size(229, 33);
+            this.cbx_TinhTrang.TabIndex = 25;
+            this.cbx_TinhTrang.SelectedIndexChanged += new System.EventHandler(this.cbx_TinhTrang_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -325,26 +321,6 @@
             this.label10.Size = new System.Drawing.Size(111, 25);
             this.label10.TabIndex = 22;
             this.label10.Text = "Tình trạng: ";
-            // 
-            // dtp_billinday
-            // 
-            this.dtp_billinday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_billinday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_billinday.Location = new System.Drawing.Point(1088, 48);
-            this.dtp_billinday.Name = "dtp_billinday";
-            this.dtp_billinday.Size = new System.Drawing.Size(151, 30);
-            this.dtp_billinday.TabIndex = 21;
-            this.dtp_billinday.ValueChanged += new System.EventHandler(this.dtp_billinday_ValueChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1022, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 25);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Ngày:";
             // 
             // listBill
             // 
@@ -446,9 +422,7 @@
         private System.Windows.Forms.TextBox txt_TinhTrang;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_HuyDon;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_TinhTrang;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dtp_billinday;
-        private System.Windows.Forms.Label label9;
     }
 }
