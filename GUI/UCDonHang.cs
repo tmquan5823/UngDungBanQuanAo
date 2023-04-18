@@ -300,5 +300,16 @@ namespace GUI
 
             listBD.Clear();
         }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            if(lv_SanPham.SelectedItems.Count > 0)
+            {
+                int position = lv_SanPham.Items.IndexOf(lv_SanPham.SelectedItems[0]);
+                bl.TotalPrice -= listBD[position].Price;
+                listBD.RemoveAt(position);
+                ShowSanPhamBackUp();
+            }
+        }
     }
 }

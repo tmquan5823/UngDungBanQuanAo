@@ -37,6 +37,7 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grb_TTHoaDon = new System.Windows.Forms.GroupBox();
+            this.btn_Reset = new System.Windows.Forms.Button();
             this.txt_SDT = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
@@ -63,7 +64,6 @@
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btn_Reset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grb_TTHoaDon.SuspendLayout();
             this.SuspendLayout();
@@ -158,6 +158,19 @@
             this.grb_TTHoaDon.TabStop = false;
             this.grb_TTHoaDon.Text = "Thông tin hóa đơn";
             // 
+            // btn_Reset
+            // 
+            this.btn_Reset.BackColor = System.Drawing.Color.White;
+            this.btn_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reset.Location = new System.Drawing.Point(750, 335);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(96, 41);
+            this.btn_Reset.TabIndex = 33;
+            this.btn_Reset.Text = "Reset";
+            this.btn_Reset.UseVisualStyleBackColor = false;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
+            // 
             // txt_SDT
             // 
             this.txt_SDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,6 +254,7 @@
             this.btn_xoa.TabIndex = 24;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // label4
             // 
@@ -408,19 +422,6 @@
             // 
             this.columnHeader9.Text = "Số lượng";
             this.columnHeader9.Width = 101;
-            // 
-            // btn_Reset
-            // 
-            this.btn_Reset.BackColor = System.Drawing.Color.White;
-            this.btn_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reset.Location = new System.Drawing.Point(750, 335);
-            this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(96, 41);
-            this.btn_Reset.TabIndex = 33;
-            this.btn_Reset.Text = "Reset";
-            this.btn_Reset.UseVisualStyleBackColor = false;
-            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // UCDonHang
             // 
