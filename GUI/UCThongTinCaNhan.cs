@@ -75,6 +75,7 @@ namespace GUI
                         btn_luuMK.Visible = btn_huy.Visible = false;
                         btn_doimk.Visible = true;
                         txt_mkhientai.Text = txt_mkmoi.Text = txt_xacnhanmk.Text = "";
+                        groupBox2.Enabled = false;
                     }
                     else
                     {
