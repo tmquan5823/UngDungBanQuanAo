@@ -151,7 +151,6 @@ namespace GUI
                 bl.TotalPrice = bd.Price;
                 BillBLL.getInstance.addBill(bl);
 
-                bd.BillID = BillBLL.getInstance.getListBill().Count;
 
                 sz.quantity -= quantity;
                 SizeBLL.instance.UpdateNumberOfSize(SizeName, clo.clothesID, sz.quantity);

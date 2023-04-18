@@ -93,7 +93,7 @@ namespace BLL
 
         public void addBill(Bill bill)
         {
-            BillDAL.getInstance.
+            BillDAL.getInstance.AddBillByUserId(bill);
         }
 
     }

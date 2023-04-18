@@ -257,8 +257,9 @@
             this.cbx_KichThuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_KichThuoc.FormattingEnabled = true;
             this.cbx_KichThuoc.Items.AddRange(new object[] {
-            "",
-            "Áo"});
+            "Size S",
+            "Size M",
+            "Size L"});
             this.cbx_KichThuoc.Location = new System.Drawing.Point(155, 229);
             this.cbx_KichThuoc.Name = "cbx_KichThuoc";
             this.cbx_KichThuoc.Size = new System.Drawing.Size(178, 33);
