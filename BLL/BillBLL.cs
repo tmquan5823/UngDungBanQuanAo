@@ -31,5 +31,6 @@ namespace BLL
         {
             BillDAL.getInstance.UpdateBillStatus(BillID, Status);
         }
+        
     }
 }

@@ -23,10 +23,10 @@ namespace GUI
         public void HienThiHoaDon()
         {
             List<Bill> bills = BillBLL.getInstance.getListBill();
+            listBill.Items.Clear();
             foreach (Bill bill in bills)
             {
-                ListViewItem item = new ListViewItem();
-                item.SubItems.Add(bill.BillID + "");
+                ListViewItem item = new ListViewItem(bill.BillID + "");
                 item.SubItems.Add(bill.UserID + "");
                 int UserID = bill.UserID;
                 UserInfo person = UserInfoBLL.instance.getUserByID(UserID);
@@ -52,18 +52,23 @@ namespace GUI
                 lbl_TongTien.Text = lvi.SubItems[4].Text;
                 txt_TinhTrang.Text = lvi.SubItems[5].Text;
                 txt_PTThanhToan.Text = bill1.paymentMethod.ToString();
+
+                // Hiển thị BillDetail
                 List<BillDetail> listBD = BillBLL.getInstance.getBillDetailByBillID(IDHoaDon);
-                listViewSanPham.Clear();
+                listViewSanPham.Items.Clear();
+                
                 foreach(BillDetail bd in listBD)
                 {
-                    ListViewItem lvi2 =new ListViewItem();
                     DTO.SizeClothes temp2 = SizeBLL.instance.getByID(bd.SizeID);
                     Clothes temp = ClothesBLL.instance.getClothesByID(temp2.clothesID);
-                    lvi2.SubItems.Add(temp.clothesID + "");
+                    ListViewItem lvi2 = new ListViewItem(temp.clothesID + "");
+
+                    
                     lvi2.SubItems.Add(temp.clothesName);
                     lvi2.SubItems.Add(temp2.NameSize);
                     lvi2.SubItems.Add(bd.Price + "");
                     lvi2.SubItems.Add(bd.BuyQuantity + "");
+                    
                     listViewSanPham.Items.Add(lvi2);
                 }
             }
@@ -79,6 +84,7 @@ namespace GUI
             int BillID = Int32.Parse(txt_IDHoaDon.Text);
             BillBLL.getInstance.updateBillStatus(BillID, "Đã hủy đơn");
             MessageBox.Show("Đã lưu trạng thái thành công");
+            HienThiHoaDon();
         }
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
@@ -91,6 +97,7 @@ namespace GUI
             int BillID = Int32.Parse(txt_IDHoaDon.Text);
             BillBLL.getInstance.updateBillStatus(BillID, "Đã xác nhận");
             MessageBox.Show("Đã lưu trạng thái thành công");
+            HienThiHoaDon();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

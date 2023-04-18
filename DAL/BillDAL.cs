@@ -72,9 +72,8 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = @"SELECT * FROM BillDetail WHERE BillID = @Id";
+            sqlcmd.CommandText = @"SELECT * FROM BillDetail WHERE BillID = " + idBill;
             sqlcmd.Connection = sqlCon;
-            sqlcmd.Parameters.Add("Id", System.Data.SqlDbType.Int).Value = idBill;
             SqlDataReader reader = sqlcmd.ExecuteReader();
 
             while (reader.Read())
@@ -194,7 +193,7 @@ namespace DAL
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-            sqlcmd.CommandText = "UPDATE Bill SET BillStatus  = '" + Status +  "' WHERE BillID = " + BillID;
+            sqlcmd.CommandText = "UPDATE Bill SET BillStatus  = N'" + Status +  "' WHERE BillID = " + BillID;
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
             return;

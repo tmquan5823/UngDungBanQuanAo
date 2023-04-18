@@ -24,5 +24,13 @@ namespace BLL
         {
             return SizeDAL.Instance.getById(id);
         }
+        public SizeClothes getSizeByNameAndClothesID(string Size, int ClothesID) 
+        {
+            return SizeDAL.Instance.getNumberBySizeAndClothesID(Size, ClothesID);
+        }
+        public void UpdateNumberOfSize(string Size, int CloID, int quantity)
+        {
+            SizeDAL.Instance.updateNumberOfSize(Size, CloID, quantity);
+        }
     }
 }
