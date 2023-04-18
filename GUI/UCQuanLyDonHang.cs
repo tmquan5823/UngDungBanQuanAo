@@ -100,14 +100,46 @@ namespace GUI
             HienThiHoaDon();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void HienThiBillByStatus(string status)
         {
-
+            List<Bill> bills = BillBLL.getInstance.getListBillByStatus(status);
+            listBill.Items.Clear();
+            foreach (Bill bill in bills)
+            {
+                ListViewItem item = new ListViewItem(bill.BillID + "");
+                item.SubItems.Add(bill.UserID + "");
+                int UserID = bill.UserID;
+                UserInfo person = UserInfoBLL.instance.getUserByID(UserID);
+                item.SubItems.Add(person.UserName);
+                item.SubItems.Add(bill.BuyDate.ToString());
+                item.SubItems.Add(bill.TotalPrice + "");
+                item.SubItems.Add(bill.status);
+                listBill.Items.Add(item);
+            }
         }
 
-        private void dtp_billinday_ValueChanged(object sender, EventArgs e)
+        private void cbx_TinhTrang_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if(cbx_TinhTrang.SelectedItem.ToString() == "Chưa xác nhận")
+            {
+                HienThiBillByStatus("Chưa xác nhận");
+                lbl_TongTien.Text = BillBLL.getInstance.getTotalBillsByStatus("Chưa xác nhận") + "";
+            }
+            else if (cbx_TinhTrang.SelectedItem.ToString() == "Đã xác nhận")
+            {
+                HienThiBillByStatus("Đã xác nhận");
+                lbl_TongTien.Text = BillBLL.getInstance.getTotalBillsByStatus("Đã xác nhận") + "";
+            }
+            else if (cbx_TinhTrang.SelectedItem.ToString() == "Đã hủy đơn")
+            {
+                HienThiBillByStatus("Đã hủy đơn");
+                lbl_TongTien.Text = BillBLL.getInstance.getTotalBillsByStatus("Đã hủy đơn") + "";
+            }
+            else if (cbx_TinhTrang.SelectedItem.ToString() == "Tất cả")
+            {
+                HienThiHoaDon();
+                lbl_TongTien.Text = BillBLL.getInstance.getTotalPriceAllBills() + "";
+            }
         }
     }
 }

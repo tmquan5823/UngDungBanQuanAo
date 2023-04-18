@@ -31,6 +31,19 @@ namespace BLL
         {
             BillDAL.getInstance.UpdateBillStatus(BillID, Status);
         }
+        public List<Bill> getListBillByStatus(string Status)
+        {
+            return BillDAL.getInstance.getListBillByStatus(Status);
+        }
+        public int getTotalBillsByStatus(string Status)
+        {
+            return BillDAL.getInstance.getTotalBillsByStatus(Status);
+        }
+        public int getTotalPriceAllBills()
+        {
+            return BillDAL.getInstance.getTotalPriceAllBill();
+        }
+        
         
     }
 }

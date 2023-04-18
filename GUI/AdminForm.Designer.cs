@@ -131,6 +131,7 @@
             this.btn_dangxuat.TabIndex = 1;
             this.btn_dangxuat.Text = "Đăng xuất";
             this.btn_dangxuat.UseVisualStyleBackColor = false;
+            this.btn_dangxuat.Click += new System.EventHandler(this.btn_dangxuat_Click);
             // 
             // btn_admin
             // 
