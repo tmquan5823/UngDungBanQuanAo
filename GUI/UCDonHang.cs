@@ -112,6 +112,53 @@ namespace GUI
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            if(lv_SanPham.Items.Count == 0)
+            {
+                if(txt_TenNguoiNhan.Text == "" || txt_DiaChi.Text == "" || txt_SDT.Text == "" || txt_SoLuongSize.Text == "" || cbx_SanPham.Text == "" || cbx_PTThanhToan.Text == "" || cbx_KichThuoc.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập và chọn đầy đủ thông tin để thêm vào");
+                    return;
+                }
+                Bill bl = new Bill();
+                bl.paymentMethod = cbx_PTThanhToan.Text;
+                bl.Tel = txt_SDT.Text;
+                bl.Address = txt_DiaChi.Text;
+                bl.receiver = txt_TenNguoiNhan.Text;
+                bl.status = "Chưa xác nhận";
+                bl.BuyDate = DateTime.Now;
+                bl.UserID = ui.UserID;
+
+                Clothes clo = ClothesBLL.instance.getClothesByName(cbx_SanPham.Text);
+
+                SizeClothes siz = new SizeClothes();
+                string SizeName = cbx_KichThuoc.Text.Substring(5);
+                int CloID = clo.clothesID;
+                SizeClothes sz = SizeBLL.instance.getSizeByNameAndClothesID(SizeName, CloID);
+
+                int quantity = Int32.Parse(txt_SoLuongSize.Text);
+
+                if(quantity > sz.quantity)
+                {
+                    MessageBox.Show("Số lượng bạn muốn mua nhiều hơn số lượng có trong kho không thể mua được !!");
+                    return;
+                }
+                
+                BillDetail bd = new BillDetail();
+                bd.BuyQuantity = quantity;
+                bd.Price = clo.price * quantity;
+                bd.SizeID = sz.SizeID;
+
+                bl.TotalPrice = bd.Price;
+                BillBLL.getInstance.addBill(bl);
+
+                bd.BillID = BillBLL.getInstance.getListBill().Count;
+
+                sz.quantity -= quantity;
+                SizeBLL.instance.UpdateNumberOfSize(SizeName, clo.clothesID, sz.quantity);
+                HienThiSanPham(bd.BillID);
+
+            }
+
 
 
             AddCbxSanPham();
