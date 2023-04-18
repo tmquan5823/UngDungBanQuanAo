@@ -189,6 +189,17 @@ namespace DAL
             sqlcmd.ExecuteNonQuery();
         }
 
+        public void UpdateBillStatus(int BillID, string Status)
+        {
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "UPDATE Bill SET BillStatus  = '" + Status +  "' WHERE BillID = " + BillID;
+            sqlcmd.Connection = sqlCon;
+            sqlcmd.ExecuteNonQuery();
+            return;
+        }
+
         /*
                 public void UpdateDetailByBillId(BillDetailDTO billDetail)
                 {

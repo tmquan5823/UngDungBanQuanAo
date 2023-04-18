@@ -25,3 +25,11 @@ C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.csproj.CopyComple
 C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.dll
 C:\Users\tmqua\Source\Repos\UngDungBanQuanAo\DTO\obj\Debug\DTO.pdb
 >>>>>>> 029ef2e1a48a41c81a057d3b480e3df78d57b790
+C:\Users\PC\source\repos\cODE2\DTO\bin\Debug\DTO.dll
+C:\Users\PC\source\repos\cODE2\DTO\bin\Debug\DTO.pdb
+C:\Users\PC\source\repos\cODE2\DTO\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\PC\source\repos\cODE2\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\cODE2\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\cODE2\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\PC\source\repos\cODE2\DTO\obj\Debug\DTO.dll
+C:\Users\PC\source\repos\cODE2\DTO\obj\Debug\DTO.pdb

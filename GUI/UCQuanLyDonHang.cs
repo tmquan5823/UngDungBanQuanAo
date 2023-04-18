@@ -57,7 +57,7 @@ namespace GUI
                 foreach(BillDetail bd in listBD)
                 {
                     ListViewItem lvi2 =new ListViewItem();
-                    DTO.Size temp2 = SizeBLL.instance.getByID(bd.SizeID);
+                    DTO.SizeClothes temp2 = SizeBLL.instance.getByID(bd.SizeID);
                     Clothes temp = ClothesBLL.instance.getClothesByID(temp2.clothesID);
                     lvi2.SubItems.Add(temp.clothesID + "");
                     lvi2.SubItems.Add(temp.clothesName);
@@ -77,7 +77,7 @@ namespace GUI
                 return;
             }
             int BillID = Int32.Parse(txt_IDHoaDon.Text);
-            BillBLL.getInstance.UpdateBill(BillID, "Đã hủy đơn");
+            BillBLL.getInstance.updateBillStatus(BillID, "Đã hủy đơn");
             MessageBox.Show("Đã lưu trạng thái thành công");
         }
 
@@ -89,7 +89,7 @@ namespace GUI
                 return;
             }
             int BillID = Int32.Parse(txt_IDHoaDon.Text);
-            BillBLL.getInstance.UpdateBill(BillID, "Đã xác nhận");
+            BillBLL.getInstance.updateBillStatus(BillID, "Đã xác nhận");
             MessageBox.Show("Đã lưu trạng thái thành công");
         }
 
