@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountBLL.cs" />
-<<<<<<< HEAD
+ HEAD
     <Compile Include="ClothesBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SizeBLL.cs" />
