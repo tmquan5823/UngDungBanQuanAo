@@ -132,12 +132,9 @@ namespace DAL
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }
-<<<<<<< HEAD
+
         public Boolean AddUserInfo(UserInfo u)
-=======
-       
-        public void AddUserInfo(UserInfo u)
->>>>>>> a73b1f0a267558ea67d4d8ff0e00d28fb59ff003
+
         {
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
@@ -148,20 +145,14 @@ namespace DAL
             if (kq > 0) return true;
             else return false;
         }
-<<<<<<< HEAD
+
         public Boolean UpdateUserInfo(UserInfo A)
-=======
-        public void UpdateUserInfo(UserInfo A, int Id)
->>>>>>> a73b1f0a267558ea67d4d8ff0e00d28fb59ff003
+
         {
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
-<<<<<<< HEAD
             sqlcmd.CommandText = "UPDATE UserInfo SET Tel  = '" + A.Tel + "', Email = '" + A.Email + "' , DateOfBirth = '" + A.DateOfBirth.ToString("yyyy-MM-dd") + "', Sex = '" + A.Sex + "', UserName = '" + A.UserName + "', Address = '" + A.Address + "' WHERE AccountId = " + A.AccountID;
-=======
-            sqlcmd.CommandText = "UPDATE UserInfo SET Tel  = '" + A.Tel + "', Email = '" + A.Email + "' , DateOfBirth = '" + Convert.ToDateTime(A.DateOfBirth) + "', Sex = N'" + A.Sex + "', UserName = N'" + A.UserName + "' WHERE UserID = "  + Id + "";
->>>>>>> a73b1f0a267558ea67d4d8ff0e00d28fb59ff003
             sqlcmd.Connection = sqlCon;
             int kq = sqlcmd.ExecuteNonQuery();
             if (kq > 0) return true;
