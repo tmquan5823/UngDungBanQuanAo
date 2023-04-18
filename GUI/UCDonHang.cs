@@ -151,13 +151,9 @@ namespace GUI
             txt_SDT.Text = bl.Tel.ToString();
             cbx_PTThanhToan.Text = bl.paymentMethod.ToString();
 
-            int total = 0;
-            foreach(var item in listBD)
-            {
-                total += (item.BuyQuantity * item.Price);
-            }
+            
 
-            lbl_TongTien.Text = total + "";
+            lbl_TongTien.Text = bl.TotalPrice + "";
 
             lv_SanPham.Items.Clear();
             foreach (var item in listBD)
@@ -203,7 +199,7 @@ namespace GUI
 
                 if (quantity > sz.quantity)
                 {
-                    MessageBox.Show("Số lượng bạn muốn mua nhiều hơn số lượng có trong kho là: " + sz.quantity + " nên không thể mua được !!");
+                    MessageBox.Show("Số lượng bạn muốn mua nhiều hơn số lượng áo có trong kho là: " + sz.quantity + " nên không thể mua được !!");
                     return;
                 }
 

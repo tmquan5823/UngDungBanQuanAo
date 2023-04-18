@@ -285,6 +285,7 @@
             this.iconButton4.TabIndex = 12;
             this.iconButton4.Text = "Thêm vào giỏ";
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // pic2
             // 
