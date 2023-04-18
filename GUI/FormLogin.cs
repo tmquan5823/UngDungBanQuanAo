@@ -37,8 +37,7 @@ namespace GUI
             Account account = new Account();
             account.UserAccount = txt_username.Text;
             account.UserPassword = txt_password.Text;
-            //account.UserRole = "Admin";
-            if (aBLL.CheckAccount(account))
+            if (aBLL.CheckAccountPassword(account))
             {
                 if (account.UserRole == "Admin")
                 {
@@ -55,7 +54,7 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("Dang nhap khong thanh cong!");
+                MessageBox.Show("Đăng nhập không thành công!");
             }
         }
     }

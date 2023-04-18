@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_confirmPass = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txt_confirmPass);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
@@ -77,15 +77,15 @@
             this.panel2.Size = new System.Drawing.Size(401, 509);
             this.panel2.TabIndex = 0;
             // 
-            // textBox1
+            // txt_confirmPass
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Silver;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(32, 360);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 38);
-            this.textBox1.TabIndex = 24;
+            this.txt_confirmPass.BackColor = System.Drawing.Color.Silver;
+            this.txt_confirmPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_confirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_confirmPass.Location = new System.Drawing.Point(32, 360);
+            this.txt_confirmPass.Name = "txt_confirmPass";
+            this.txt_confirmPass.Size = new System.Drawing.Size(339, 38);
+            this.txt_confirmPass.TabIndex = 24;
             // 
             // label8
             // 
@@ -138,6 +138,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Sign in";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txt_username
             // 
@@ -241,7 +242,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_confirmPass;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

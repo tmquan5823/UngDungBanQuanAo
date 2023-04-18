@@ -38,7 +38,7 @@ namespace GUI
 
         private void btn_TTCaNhan_Click(object sender, EventArgs e)
         {
-            UCThongTinCaNhan uc = new UCThongTinCaNhan();
+            UCThongTinCaNhan uc = new UCThongTinCaNhan(account);
             addUserControl(uc);
             lbl_info.Text = "Thông tin cá nhân";
         }

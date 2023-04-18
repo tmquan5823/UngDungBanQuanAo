@@ -56,6 +56,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btn_doimk = new System.Windows.Forms.Button();
             this.btn_luuMK = new System.Windows.Forms.Button();
+            this.btn_huy = new System.Windows.Forms.Button();
             this.panel_gioitinh.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -209,6 +210,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txt_hoten);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(56, 43);
             this.groupBox1.Name = "groupBox1";
@@ -226,6 +228,8 @@
             this.btn_chinhsua.TabIndex = 43;
             this.btn_chinhsua.Text = "Chỉnh sửa";
             this.btn_chinhsua.UseVisualStyleBackColor = true;
+            this.btn_chinhsua.Visible = false;
+            this.btn_chinhsua.Click += new System.EventHandler(this.btn_chinhsua_Click);
             // 
             // btn_luu
             // 
@@ -236,6 +240,7 @@
             this.btn_luu.TabIndex = 44;
             this.btn_luu.Text = "Lưu";
             this.btn_luu.UseVisualStyleBackColor = true;
+            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
             // groupBox2
             // 
@@ -247,6 +252,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txt_tendangnhap);
             this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(224, 439);
             this.groupBox2.Name = "groupBox2";
@@ -331,26 +337,42 @@
             // btn_doimk
             // 
             this.btn_doimk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_doimk.Location = new System.Drawing.Point(949, 505);
+            this.btn_doimk.Location = new System.Drawing.Point(949, 471);
             this.btn_doimk.Name = "btn_doimk";
             this.btn_doimk.Size = new System.Drawing.Size(215, 81);
             this.btn_doimk.TabIndex = 45;
             this.btn_doimk.Text = "Đổi mật khẩu";
-            this.btn_doimk.UseVisualStyleBackColor = true;
-            
+            this.btn_doimk.UseVisualStyleBackColor = false;
+            this.btn_doimk.Click += new System.EventHandler(this.btn_doimk_Click);
+            // 
             // btn_luuMK
             // 
             this.btn_luuMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_luuMK.Location = new System.Drawing.Point(949, 647);
+            this.btn_luuMK.Location = new System.Drawing.Point(949, 595);
             this.btn_luuMK.Name = "btn_luuMK";
             this.btn_luuMK.Size = new System.Drawing.Size(215, 74);
             this.btn_luuMK.TabIndex = 46;
             this.btn_luuMK.Text = "Lưu";
             this.btn_luuMK.UseVisualStyleBackColor = true;
+            this.btn_luuMK.Visible = false;
+            this.btn_luuMK.Click += new System.EventHandler(this.btn_luuMK_Click);
+            // 
+            // btn_huy
+            // 
+            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huy.Location = new System.Drawing.Point(949, 712);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(215, 74);
+            this.btn_huy.TabIndex = 47;
+            this.btn_huy.Text = "Hủy";
+            this.btn_huy.UseVisualStyleBackColor = true;
+            this.btn_huy.Visible = false;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // UCThongTinCaNhan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_luuMK);
             this.Controls.Add(this.btn_doimk);
             this.Controls.Add(this.groupBox2);
@@ -359,6 +381,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "UCThongTinCaNhan";
             this.Size = new System.Drawing.Size(1282, 803);
+            this.Load += new System.EventHandler(this.UCThongTinCaNhan_Load);
             this.panel_gioitinh.ResumeLayout(false);
             this.panel_gioitinh.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -399,5 +422,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btn_doimk;
         private System.Windows.Forms.Button btn_luuMK;
+        private System.Windows.Forms.Button btn_huy;
     }
 }

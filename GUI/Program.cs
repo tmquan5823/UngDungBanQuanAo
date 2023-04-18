@@ -18,7 +18,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminForm(new Account(2,"Quan1234","quan123")));
+            Application.Run(new FormLogin());
         }
     }
 }
