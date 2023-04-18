@@ -34,8 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_diachi = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dtp_birthday = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_sdt = new System.Windows.Forms.TextBox();
@@ -124,24 +122,6 @@
             this.label6.TabIndex = 39;
             this.label6.Text = "Email";
             // 
-            // txt_diachi
-            // 
-            this.txt_diachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_diachi.Location = new System.Drawing.Point(64, 323);
-            this.txt_diachi.Name = "txt_diachi";
-            this.txt_diachi.Size = new System.Drawing.Size(650, 30);
-            this.txt_diachi.TabIndex = 38;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(59, 295);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 25);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Địa chỉ";
-            // 
             // dtp_birthday
             // 
             this.dtp_birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -202,8 +182,6 @@
             this.groupBox1.Controls.Add(this.panel_gioitinh);
             this.groupBox1.Controls.Add(this.txt_email);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txt_diachi);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dtp_birthday);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txt_sdt);
@@ -228,7 +206,10 @@
             this.btn_chinhsua.TabIndex = 43;
             this.btn_chinhsua.Text = "Chỉnh sửa";
             this.btn_chinhsua.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.btn_chinhsua.Visible = false;
+=======
+>>>>>>> a73b1f0a267558ea67d4d8ff0e00d28fb59ff003
             this.btn_chinhsua.Click += new System.EventHandler(this.btn_chinhsua_Click);
             // 
             // btn_luu
@@ -273,7 +254,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
+            this.label9.Location = new System.Drawing.Point(61, 271);
+=======
             this.label9.Location = new System.Drawing.Point(57, 271);
+>>>>>>> 07d933ff24ae8fc96f056333014514b81ffdb389
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(181, 25);
             this.label9.TabIndex = 37;
@@ -342,9 +327,19 @@
             this.btn_doimk.Size = new System.Drawing.Size(215, 81);
             this.btn_doimk.TabIndex = 45;
             this.btn_doimk.Text = "Đổi mật khẩu";
+<<<<<<< HEAD
             this.btn_doimk.UseVisualStyleBackColor = false;
             this.btn_doimk.Click += new System.EventHandler(this.btn_doimk_Click);
             // 
+=======
+            this.btn_doimk.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+            this.btn_doimk.Click += new System.EventHandler(this.btn_doimk_Click);
+            // 
+=======
+            
+>>>>>>> 07d933ff24ae8fc96f056333014514b81ffdb389
+>>>>>>> a73b1f0a267558ea67d4d8ff0e00d28fb59ff003
             // btn_luuMK
             // 
             this.btn_luuMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -354,6 +349,7 @@
             this.btn_luuMK.TabIndex = 46;
             this.btn_luuMK.Text = "Lưu";
             this.btn_luuMK.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.btn_luuMK.Visible = false;
             this.btn_luuMK.Click += new System.EventHandler(this.btn_luuMK_Click);
             // 
@@ -368,6 +364,12 @@
             this.btn_huy.UseVisualStyleBackColor = true;
             this.btn_huy.Visible = false;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
+=======
+<<<<<<< HEAD
+            this.btn_luuMK.Click += new System.EventHandler(this.btn_luuMK_Click);
+=======
+>>>>>>> 07d933ff24ae8fc96f056333014514b81ffdb389
+>>>>>>> a73b1f0a267558ea67d4d8ff0e00d28fb59ff003
             // 
             // UCThongTinCaNhan
             // 
@@ -400,8 +402,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_diachi;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtp_birthday;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_sdt;

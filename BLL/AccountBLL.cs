@@ -51,5 +51,15 @@ namespace BLL
                 else return false;
             }
         }
+
+        public void updateAccount(Account acc, int id)
+        {
+            accountDAL.UpdateAccountInfo(acc, id);
+        }
+
+        public Account LayDuLieuTK(int id)
+        {
+            return accountDAL.getAccountById(id);
+        }
     }
 }

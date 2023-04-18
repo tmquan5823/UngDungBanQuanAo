@@ -17,6 +17,7 @@ namespace BLL
         {
             return UserInfoDAL.getInstance.getById(ID);
         }
+<<<<<<< HEAD
 
         public UserInfo getByAccountId(int ID)
         {
@@ -45,5 +46,20 @@ namespace BLL
         {
             return uDAL.CheckNewAccount(accID);
         }
+=======
+        public void insertUserInfo(UserInfo user)
+        {
+            UserInfoDAL.getInstance.AddUserInfo(user);
+        }
+        public void updateUserInfo(UserInfo user, int Id)
+        {
+            UserInfoDAL.getInstance.UpdateUserInfo(user, Id);
+        }
+
+      
+      
+
+   
+>>>>>>> a73b1f0a267558ea67d4d8ff0e00d28fb59ff003
     }
 }

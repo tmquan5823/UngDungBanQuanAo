@@ -24,6 +24,8 @@ namespace DAL
             {
                 if (reader.GetString(1) == account.UserPassword)
                 {
+                    
+                    account.AccountID = reader.GetInt32(3);
                     account.UserRole = reader.GetString(2);
                     account.AccountID = reader.GetInt32(3);
                     reader.Close();
@@ -63,16 +65,54 @@ namespace DAL
             sqlcmd.Connection = sqlCon;
             sqlcmd.ExecuteNonQuery();
         }
+<<<<<<< HEAD
         public Boolean ChangeAccountPassword(Account a, string pass)
+=======
+        public Account getAccountById(int ID)
+        {
+            Account app = new Account();
+            OpenConnection();
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = System.Data.CommandType.Text;
+            sqlcmd.CommandText = "SELECT * FROM Account WHERE AccountID  = " + ID + "";
+            sqlcmd.Connection = sqlCon;
+
+            SqlDataReader reader = sqlcmd.ExecuteReader();
+            while (reader.Read())
+            {
+                app.AccountID = reader.GetInt32(0);
+                app.UserRole = reader.GetString(1);
+                app.UserAccount = reader.GetString(2);
+                app.UserPassword = reader.GetString(3);
+                
+                  
+            }
+            reader.Close();
+            return app;
+        }
+
+
+        public void UpdateAccountInfo(Account A, int Id)
+>>>>>>> a73b1f0a267558ea67d4d8ff0e00d28fb59ff003
         {
             OpenConnection();
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = System.Data.CommandType.Text;
+<<<<<<< HEAD
             sqlcmd.CommandText = "update ACCOUNT set UserPassword = '" + pass +"' where UserAccount = '" + a.UserAccount + "'";
             sqlcmd.Connection = sqlCon;
             int kq = sqlcmd.ExecuteNonQuery();
             if(kq > 0) { return true; }
             return false;
         }
+=======
+            sqlcmd.CommandText = "UPDATE Account SET UserAccount  = '" + A.UserAccount + "', UserPassword = '" + A.UserPassword + "' WHERE AccountID = " + Id + "";
+            sqlcmd.Connection = sqlCon;
+            sqlcmd.ExecuteNonQuery();
+            return;
+        }
+
+
+>>>>>>> a73b1f0a267558ea67d4d8ff0e00d28fb59ff003
     }
 }
