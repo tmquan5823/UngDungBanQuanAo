@@ -18,7 +18,9 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            Account acc= new Account();    
+            acc.AccountID = 1;
+            Application.Run(new UserForm(acc));
         }
     }
 }

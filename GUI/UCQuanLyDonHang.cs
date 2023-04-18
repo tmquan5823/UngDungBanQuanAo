@@ -94,6 +94,11 @@ namespace GUI
                 MessageBox.Show("Mời bạn chọn một bill trong danh sách !!");
                 return;
             }
+            if(cbx_TinhTrang.Text == "Đã hủy đơn")
+            {
+                MessageBox.Show("Đơn đã hủy không thể xác nhận!!");
+                return;
+            }
             int BillID = Int32.Parse(txt_IDHoaDon.Text);
             BillBLL.getInstance.updateBillStatus(BillID, "Đã xác nhận");
             MessageBox.Show("Đã lưu trạng thái thành công");

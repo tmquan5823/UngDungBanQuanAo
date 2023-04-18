@@ -63,6 +63,7 @@
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_Reset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grb_TTHoaDon.SuspendLayout();
             this.SuspendLayout();
@@ -128,6 +129,7 @@
             // 
             // grb_TTHoaDon
             // 
+            this.grb_TTHoaDon.Controls.Add(this.btn_Reset);
             this.grb_TTHoaDon.Controls.Add(this.txt_SDT);
             this.grb_TTHoaDon.Controls.Add(this.label9);
             this.grb_TTHoaDon.Controls.Add(this.txt_DiaChi);
@@ -231,7 +233,6 @@
             // btn_xoa
             // 
             this.btn_xoa.BackColor = System.Drawing.Color.White;
-            this.btn_xoa.Enabled = false;
             this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoa.Location = new System.Drawing.Point(648, 335);
@@ -266,23 +267,21 @@
             // btn_Them
             // 
             this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them.Location = new System.Drawing.Point(528, 175);
+            this.btn_Them.Location = new System.Drawing.Point(486, 171);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(96, 41);
+            this.btn_Them.Size = new System.Drawing.Size(135, 41);
             this.btn_Them.TabIndex = 21;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // cbx_SanPham
             // 
             this.cbx_SanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_SanPham.FormattingEnabled = true;
-            this.cbx_SanPham.Items.AddRange(new object[] {
-            "",
-            "Áo"});
             this.cbx_SanPham.Location = new System.Drawing.Point(155, 179);
             this.cbx_SanPham.Name = "cbx_SanPham";
-            this.cbx_SanPham.Size = new System.Drawing.Size(319, 33);
+            this.cbx_SanPham.Size = new System.Drawing.Size(325, 33);
             this.cbx_SanPham.TabIndex = 20;
             // 
             // label3
@@ -320,6 +319,7 @@
             this.btn_HuyDon.TabIndex = 17;
             this.btn_HuyDon.Text = "Hủy đơn";
             this.btn_HuyDon.UseVisualStyleBackColor = false;
+            this.btn_HuyDon.Click += new System.EventHandler(this.btn_HuyDon_Click);
             // 
             // btn_XacNhanDonHang
             // 
@@ -332,6 +332,7 @@
             this.btn_XacNhanDonHang.TabIndex = 16;
             this.btn_XacNhanDonHang.Text = "Xác nhận đơn hàng";
             this.btn_XacNhanDonHang.UseVisualStyleBackColor = false;
+            this.btn_XacNhanDonHang.Click += new System.EventHandler(this.btn_XacNhanDonHang_Click);
             // 
             // label7
             // 
@@ -381,6 +382,7 @@
             this.lv_SanPham.TabIndex = 1;
             this.lv_SanPham.UseCompatibleStateImageBehavior = false;
             this.lv_SanPham.View = System.Windows.Forms.View.Details;
+            this.lv_SanPham.SelectedIndexChanged += new System.EventHandler(this.lv_SanPham_SelectedIndexChanged);
             // 
             // columnHeader4
             // 
@@ -406,6 +408,19 @@
             // 
             this.columnHeader9.Text = "Số lượng";
             this.columnHeader9.Width = 101;
+            // 
+            // btn_Reset
+            // 
+            this.btn_Reset.BackColor = System.Drawing.Color.White;
+            this.btn_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reset.Location = new System.Drawing.Point(750, 335);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(96, 41);
+            this.btn_Reset.TabIndex = 33;
+            this.btn_Reset.Text = "Reset";
+            this.btn_Reset.UseVisualStyleBackColor = false;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // UCDonHang
             // 
@@ -458,5 +473,6 @@
         private System.Windows.Forms.TextBox txt_TenNguoiNhan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_SoLuongSize;
+        private System.Windows.Forms.Button btn_Reset;
     }
 }

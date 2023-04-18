@@ -91,5 +91,10 @@ namespace BLL
             return BillDAL.getInstance.GetBillDetailListById(BillID);
         }
 
+        public void addBill(Bill bill)
+        {
+            BillDAL.getInstance.
+        }
+
     }
 }
